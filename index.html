@@ -322,18 +322,25 @@ section[id],footer[id]{scroll-margin-top:84px}
 .cmpx::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;right:-160px;bottom:-200px;background:radial-gradient(circle,rgba(223,186,129,.22),transparent 65%);opacity:0;transition:opacity .7s;pointer-events:none}
 .cmpx.is-new{background:linear-gradient(160deg,#2d5a37 0%,#234a2c 100%);border-color:transparent;box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 4px 8px rgba(45,90,55,.12),0 44px 90px -24px rgba(45,90,55,.6)}
 .cmpx.is-new::before{opacity:1}
-.cmpx__toggle{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:5px;border-radius:999px;background:rgba(45,90,55,.08);border:1px solid rgba(45,90,55,.1);max-width:560px;margin:0 auto;transition:background .7s,border-color .7s;z-index:1}
-.cmpx.is-new .cmpx__toggle{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.18)}
-.cmpx__knob{position:absolute;top:5px;bottom:5px;left:5px;width:calc(50% - 7px);border-radius:999px;background:#fff;box-shadow:0 2px 4px rgba(5,5,5,.06),0 10px 24px -8px rgba(45,90,55,.35);transition:transform .55s var(--ease),background .7s}
-.cmpx.is-new .cmpx__knob{transform:translateX(calc(100% + 4px));background:linear-gradient(135deg,var(--gold-light),var(--gold))}
-.cmpx__tab{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;gap:10px;background:none;border:0;cursor:pointer;font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:14px 16px;min-height:50px;border-radius:999px;color:rgba(5,5,5,.5);transition:color .4s;-webkit-tap-highlight-color:transparent}
-.cmpx__tab i{font-style:normal;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:12px;background:rgba(5,5,5,.08);color:rgba(5,5,5,.5);transition:all .4s}
+/* Toggle Antes/Agora: trilho rebaixado + botão deslizante com relevo */
+.cmpx__toggle{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:6px;border-radius:999px;background:linear-gradient(180deg,rgba(45,90,55,.10),rgba(45,90,55,.05));border:1px solid rgba(45,90,55,.12);box-shadow:inset 0 2px 6px rgba(45,90,55,.14),inset 0 -1px 0 rgba(255,255,255,.7);max-width:600px;margin:0 auto;transition:background .7s,border-color .7s,box-shadow .7s;z-index:1}
+.cmpx.is-new .cmpx__toggle{background:linear-gradient(180deg,rgba(0,0,0,.22),rgba(0,0,0,.12));border-color:rgba(255,255,255,.14);box-shadow:inset 0 2px 8px rgba(0,0,0,.35),inset 0 -1px 0 rgba(255,255,255,.08)}
+.cmpx__knob{position:absolute;top:6px;bottom:6px;left:6px;width:calc(50% - 9px);border-radius:999px;background:linear-gradient(180deg,#ffffff,#f3f1ee);box-shadow:inset 0 1px 0 #fff,inset 0 -2px 0 rgba(45,90,55,.08),0 3px 6px rgba(5,5,5,.08),0 12px 26px -10px rgba(45,90,55,.45);transition:transform .55s var(--ease),background .7s,box-shadow .7s}
+.cmpx__knob::after{content:"";position:absolute;inset:3px 3px 50% 3px;border-radius:999px 999px 40% 40%;background:linear-gradient(180deg,rgba(255,255,255,.7),rgba(255,255,255,0));pointer-events:none}
+.cmpx.is-new .cmpx__knob{transform:translateX(calc(100% + 6px));background:linear-gradient(135deg,#f3dfa3,#dfba81 45%,#c59b5f);box-shadow:inset 0 1px 0 rgba(255,255,255,.7),inset 0 -2px 0 rgba(0,0,0,.12),0 3px 6px rgba(0,0,0,.18),0 14px 30px -10px rgba(223,186,129,.7)}
+.cmpx__tab{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;gap:12px;background:none;border:0;cursor:pointer;font-family:var(--display);padding:10px 14px;min-height:60px;border-radius:999px;color:rgba(5,5,5,.5);transition:color .4s;-webkit-tap-highlight-color:transparent;text-align:left}
+.cmpx__tab i{font-style:normal;flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;background:rgba(5,5,5,.08);color:rgba(5,5,5,.5);transition:all .4s;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+.cmpx__tab-txt{display:flex;flex-direction:column;line-height:1.1;gap:3px}
+.cmpx__tab-txt small{font-size:9.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;opacity:.75}
+.cmpx__tab-txt b{font-size:13px;font-weight:700;letter-spacing:.02em}
 .cmpx__tab.is-active{color:var(--terra)}
-.cmpx__tab.is-active i{background:rgba(196,124,106,.15);color:var(--terra)}
+.cmpx__tab.is-active i{background:linear-gradient(135deg,#d99a89,#c47c6a);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 4px 10px -4px rgba(196,124,106,.6)}
 .cmpx.is-new .cmpx__tab{color:rgba(255,255,255,.55)}
-.cmpx.is-new .cmpx__tab i{background:rgba(255,255,255,.12);color:rgba(255,255,255,.6)}
+.cmpx.is-new .cmpx__tab i{background:rgba(255,255,255,.12);color:rgba(255,255,255,.6);box-shadow:none}
 .cmpx.is-new .cmpx__tab.is-active{color:var(--green-deep)}
-.cmpx.is-new .cmpx__tab.is-active i{background:rgba(35,74,44,.18);color:var(--green-deep)}
+.cmpx.is-new .cmpx__tab.is-active i{background:linear-gradient(135deg,#3c9a68,#2d5a37);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 4px 10px -4px rgba(45,90,55,.6)}
+.cmpx__tab:not(.is-active):hover{color:rgba(5,5,5,.75)}
+.cmpx.is-new .cmpx__tab:not(.is-active):hover{color:rgba(255,255,255,.85)}
 .cmpx__hint{text-align:center;font-size:12px;color:rgba(5,5,5,.42);margin:12px 0 0;letter-spacing:.04em;transition:color .5s,opacity .5s}
 .cmpx.is-new .cmpx__hint{color:rgba(255,255,255,.5)}
 .cmpx.has-clicked .cmpx__hint{opacity:0}
@@ -364,10 +371,12 @@ section[id],footer[id]{scroll-margin-top:84px}
   .compare__cta{margin-top:36px}
   .cmpx{border-radius:26px}
   .cmpx__list{grid-template-columns:1fr;gap:10px}
-  .cmpx__tab{font-size:11px;letter-spacing:.04em;padding:12px 8px;gap:8px}
+  .cmpx__tab{padding:10px 8px;gap:8px;min-height:58px}
+  .cmpx__tab-txt b{font-size:12px}
+  .cmpx__tab-txt small{font-size:9px;letter-spacing:.2em}
   .cmpx__title{font-size:21px}
 }
-@media (max-width:420px){.cmpx__tab i{display:none}}
+@media (max-width:360px){.cmpx__tab i{display:none}}
 
 /* =========================================================
    S3 SOBRE
@@ -958,8 +967,8 @@ section[id],footer[id]{scroll-margin-top:84px}
     <div class="cmpx" id="cmpx" data-reveal="scale">
       <div class="cmpx__toggle" role="tablist" aria-label="Comparar abordagens">
         <span class="cmpx__knob" aria-hidden="true"></span>
-        <button class="cmpx__tab is-active" role="tab" aria-selected="true" data-state="old" type="button"><i>✕</i>Antes: dieta da moda</button>
-        <button class="cmpx__tab" role="tab" aria-selected="false" data-state="new" type="button"><i>✓</i>Agora: Método Kamilla</button>
+        <button class="cmpx__tab is-active" role="tab" aria-selected="true" data-state="old" type="button"><i>✕</i><span class="cmpx__tab-txt"><small>Antes</small><b>Dieta da moda</b></span></button>
+        <button class="cmpx__tab" role="tab" aria-selected="false" data-state="new" type="button"><i>✓</i><span class="cmpx__tab-txt"><small>Agora</small><b>Método Kamilla</b></span></button>
       </div>
       <p class="cmpx__hint" aria-hidden="true">Toque para ver a diferença</p>
 
