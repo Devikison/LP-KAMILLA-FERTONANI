@@ -354,7 +354,7 @@ section[id],footer[id]{scroll-margin-top:84px}
 .about__media{position:relative}
 .about__img{border-radius:220px 220px 36px 36px;aspect-ratio:550/650;overflow:hidden;background:#e7ede8;box-shadow:0 6px 12px rgba(5,5,5,.05),0 30px 60px rgba(5,5,5,.1)}
 .about__img img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
-.about__badge{position:absolute;right:-12px;bottom:36px;background:rgba(255,255,255,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.9);border-radius:20px;padding:16px 22px;box-shadow:inset 0 1px 0 #fff,0 16px 36px rgba(45,90,55,.14)}
+.about__badge{position:absolute;right:-12px;bottom:36px;background:rgba(255,255,255,.55);will-change:transform;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.9);border-radius:20px;padding:16px 22px;box-shadow:inset 0 1px 0 #fff,0 16px 36px rgba(45,90,55,.14)}
 .about__badge b{display:block;font-family:var(--serif);font-weight:600;font-size:30px;line-height:1;color:var(--green)}
 .about__badge span{display:block;font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(5,5,5,.6);margin-top:6px}
 .about .h2{line-height:1.18;margin-bottom:24px;font-size:clamp(28px,2.7vw,38px)}
@@ -959,7 +959,7 @@ section[id],footer[id]{scroll-margin-top:84px}
     <div class="about__grid">
       <div class="about__media" data-reveal="left">
         <div class="about__img"><img src="assets/hero-kamilla.jpg" alt="Kamilla Fertonani em seu consultório" width="550" height="650" loading="lazy"></div>
-        <div class="about__badge"><b data-count="1000" data-prefix="+" data-duration="2600">+1.000</b><span>pacientes transformadas</span></div>
+        <div class="about__badge" data-float="14"><b data-count="1000" data-prefix="+" data-duration="2600">+1.000</b><span>pacientes transformadas</span></div>
       </div>
       <div data-reveal="right" style="--rd:.1s">
         <p class="eyebrow" style="margin-bottom:18px">Quem vai te acompanhar</p>
@@ -1444,6 +1444,39 @@ section[id],footer[id]{scroll-margin-top:84px}
     syncNow();
     window.addEventListener('load', syncNow);
     window.addEventListener('pageshow', syncNow);
+  })();
+
+  // ---------- Flutuação sutil no scroll (data-float="px"): paralaxe leve com suavização ----------
+  (function(){
+    var els = Array.prototype.slice.call(document.querySelectorAll('[data-float]'));
+    if (!els.length) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var items = els.map(function(el){ return { el: el, strength: parseFloat(el.getAttribute('data-float')) || 12, cur: 0, target: 0 }; });
+    var running = false;
+    function measure(){
+      var vh = window.innerHeight || 800;
+      items.forEach(function(it){
+        var r = it.el.getBoundingClientRect();
+        var center = r.top + r.height / 2;
+        // -1 (topo da tela) … +1 (base da tela) → desloca no sentido contrário ao scroll
+        var rel = Math.max(-1, Math.min(1, (center - vh / 2) / (vh / 2)));
+        it.target = rel * it.strength;
+      });
+      if (!running) { running = true; requestAnimationFrame(step); }
+    }
+    function step(){
+      var active = false;
+      items.forEach(function(it){
+        it.cur += (it.target - it.cur) * 0.08;          // suavização: chega devagar ao destino
+        if (Math.abs(it.target - it.cur) > 0.05) active = true;
+        it.el.style.transform = 'translate3d(0,' + it.cur.toFixed(2) + 'px,0) rotate(' + (it.cur * 0.08).toFixed(2) + 'deg)';
+      });
+      if (active) requestAnimationFrame(step); else running = false;
+    }
+    window.addEventListener('scroll', measure, { passive: true });
+    window.addEventListener('resize', measure);
+    window.addEventListener('load', measure);
+    measure();
   })();
 
   // ---------- Contadores (ex.: +1.000): sobem em câmera lenta ao entrar na tela ----------
