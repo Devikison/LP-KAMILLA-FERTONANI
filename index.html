@@ -103,10 +103,14 @@ section,footer{position:relative}
    ========================================================= */
 .header{position:sticky;top:0;z-index:50;background:rgba(247,245,244,.55);backdrop-filter:blur(22px) saturate(170%);-webkit-backdrop-filter:blur(22px) saturate(170%);border-bottom:1px solid rgba(255,255,255,.65);box-shadow:0 1px 0 rgba(45,90,55,.06),0 16px 44px -16px rgba(5,5,5,.14)}
 .header__in{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:84px;padding-top:18px;padding-bottom:18px}
-.brand{display:flex;flex-direction:column;line-height:1;text-decoration:none}
-.brand__name{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--green);white-space:nowrap;letter-spacing:-.01em}
+/* Lockup da marca: NUTRICIONISTA em cima (centralizado, com traços dourados) e o nome embaixo */
+.brand{display:inline-flex;flex-direction:column;align-items:center;line-height:1;text-decoration:none;gap:6px}
+.brand__name{order:2;font-family:var(--serif);font-size:23px;font-weight:400;color:var(--green);white-space:nowrap;letter-spacing:-.005em;transition:color .3s}
+.brand:hover .brand__name{color:var(--green-bright)}
 .cta-short{display:none}
-.brand__role{font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);margin-top:6px}
+.brand__role{order:1;display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-size:9.5px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin:0;padding-left:.3em}
+.brand__role::before,.brand__role::after{content:"";width:18px;height:1px;background:linear-gradient(90deg,transparent,var(--gold-light));flex:none}
+.brand__role::after{background:linear-gradient(270deg,transparent,var(--gold-light))}
 .nav{display:flex;gap:32px}
 .nav a{font-family:var(--display);font-weight:600;font-size:13px;color:var(--ink);text-decoration:none;opacity:.75;transition:all .3s}
 .nav a:hover{opacity:1;color:var(--green)}
@@ -127,6 +131,9 @@ section,footer{position:relative}
   .header__in{min-height:72px;padding-top:12px;padding-bottom:12px;gap:12px}
   .header__right{gap:8px}
   .brand__name{font-size:19px}
+  .brand{gap:5px}
+  .brand__role{font-size:8.5px;letter-spacing:.24em}
+  .brand__role::before,.brand__role::after{width:12px}
   .header .btn--sm{padding:12px 16px;min-height:44px;font-size:12px;white-space:nowrap}
   .cta-full{display:none}
   .cta-short{display:inline}
@@ -642,8 +649,10 @@ section,footer{position:relative}
 .footer__col{display:flex;flex-direction:column;gap:10px;font-size:14.5px;color:rgba(5,5,5,.7)}
 .footer__col a{color:var(--green);text-decoration:none;font-weight:500;transition:color .25s}
 .footer__col a:hover{color:var(--terra)}
-.footer__brand .brand__name{font-size:26px}
-.footer__brand .brand__role{margin-top:2px}
+.brand--footer{align-items:flex-start;gap:8px}
+.brand--footer .brand__name{font-size:27px}
+.brand--footer .brand__role::before{display:none}
+@media (max-width:860px){.brand--footer{align-items:center}.brand--footer .brand__role::before{display:block}}
 .footer__brand p{margin:12px 0 0;max-width:340px;line-height:1.7;font-size:14.5px;color:rgba(5,5,5,.66)}
 .footer__title{font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
 .social-links{display:flex;gap:10px;flex-wrap:wrap}
@@ -1230,8 +1239,7 @@ section,footer{position:relative}
 
     <div class="footer__grid">
       <div class="footer__col footer__brand">
-        <span class="brand__name">Kamilla Fertonani</span>
-        <span class="brand__role">Nutricionista</span>
+        <span class="brand brand--footer"><span class="brand__name">Kamilla Fertonani</span><span class="brand__role">Nutricionista</span></span>
         <p>Emagrecimento definitivo pela saúde intestinal. Atendimento online para todo o Brasil.</p>
       </div>
       <div class="footer__col">
