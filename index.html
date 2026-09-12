@@ -109,14 +109,17 @@ section,footer{position:relative}
 .brand:hover .brand__name{color:var(--green-bright)}
 .cta-short{display:none}
 .brand__role{order:1;display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-size:9.5px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin:0;padding-left:.3em}
-.nav{display:flex;gap:22px}
-.nav a{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:600;font-size:13px;color:rgba(5,5,5,.72);text-decoration:none;transition:color .3s var(--ease)}
-.nav__ic{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;flex:none;color:var(--green);border:1px solid rgba(45,90,55,.16);background:linear-gradient(135deg,rgba(255,255,255,.7),rgba(255,255,255,.25));box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 1px 2px rgba(45,90,55,.05);transition:all .35s var(--ease)}
-.nav__ic svg{width:16px;height:16px;transition:transform .35s var(--ease)}
-.nav a:hover{color:var(--green)}
-.nav a:hover .nav__ic{background:rgba(60,154,104,.16);border-color:rgba(60,154,104,.45);color:var(--green);box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 0 0 4px rgba(60,154,104,.08),0 6px 14px -6px rgba(60,154,104,.5);transform:translateY(-1px)}
-.nav a:hover .nav__ic svg{transform:scale(1.08)}
-@media (max-width:1180px){.nav{gap:12px}.nav a{font-size:12.5px;gap:7px}.nav__ic{width:30px;height:30px}.nav__ic svg{width:14px;height:14px}}
+/* Menu: pílulas glass sutis com ícone */
+.nav{display:flex;gap:8px}
+.nav a{position:relative;display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:600;font-size:12.5px;letter-spacing:.02em;color:rgba(5,5,5,.72);text-decoration:none;padding:5px 14px 5px 5px;border-radius:999px;background:linear-gradient(135deg,rgba(255,255,255,.55),rgba(255,255,255,.18));backdrop-filter:blur(12px) saturate(150%);-webkit-backdrop-filter:blur(12px) saturate(150%);border:1px solid rgba(255,255,255,.7);box-shadow:inset 0 1px 0 rgba(255,255,255,.85),0 1px 2px rgba(45,90,55,.04);transition:all .35s var(--ease);overflow:hidden}
+.nav a::after{content:"";position:absolute;top:0;left:-70%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);transition:left .6s var(--ease);pointer-events:none}
+.nav__ic{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;flex:none;color:var(--green);background:rgba(45,90,55,.07);transition:all .35s var(--ease)}
+.nav__ic svg{width:15px;height:15px;transition:transform .35s var(--ease)}
+.nav a:hover{color:var(--green);background:rgba(60,154,104,.12);border-color:rgba(60,154,104,.35);box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 0 0 3px rgba(60,154,104,.06),0 8px 18px -8px rgba(60,154,104,.45);transform:translateY(-1px)}
+.nav a:hover::after{left:120%}
+.nav a:hover .nav__ic{background:rgba(255,255,255,.75);box-shadow:0 2px 6px -2px rgba(45,90,55,.3)}
+.nav a:hover .nav__ic svg{transform:scale(1.1)}
+@media (max-width:1180px){.nav{gap:6px}.nav a{font-size:12px;gap:6px;padding:4px 11px 4px 4px}.nav__ic{width:26px;height:26px}.nav__ic svg{width:13px;height:13px}}
 .header__right{display:flex;align-items:center;gap:12px}
 .menu-btn{display:none;width:48px;height:48px;border-radius:50%;border:1px solid rgba(45,90,55,.15);background:rgba(255,255,255,.7);cursor:pointer;place-items:center;color:var(--green);-webkit-tap-highlight-color:transparent}
 .menu-btn svg{width:22px;height:22px}
@@ -127,7 +130,8 @@ section,footer{position:relative}
   .nav{display:none}
   .menu-btn{display:grid}
   .header.is-open .nav{display:flex;flex-direction:column;gap:0;position:absolute;left:0;right:0;top:100%;background:rgba(247,245,244,.96);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid rgba(45,90,55,.08);padding:8px var(--gutter) 16px;box-shadow:0 24px 44px -16px rgba(5,5,5,.2)}
-  .header.is-open .nav a{padding:12px 0;border-bottom:1px solid rgba(45,90,55,.08);font-size:15px;gap:14px;color:var(--ink)}
+  .header.is-open .nav a{padding:12px 4px;border:0;border-radius:0;border-bottom:1px solid rgba(45,90,55,.08);font-size:15px;gap:14px;color:var(--ink);background:none;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none}
+  .header.is-open .nav a::after{display:none}
   .header.is-open .nav__ic{width:38px;height:38px}
   .header.is-open .nav__ic svg{width:18px;height:18px}
   .header.is-open .nav a:last-child{border-bottom:0}
