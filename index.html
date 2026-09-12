@@ -109,8 +109,6 @@ section,footer{position:relative}
 .brand:hover .brand__name{color:var(--green-bright)}
 .cta-short{display:none}
 .brand__role{order:1;display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-size:9.5px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin:0;padding-left:.3em}
-.brand__role::before,.brand__role::after{content:"";width:18px;height:1px;background:linear-gradient(90deg,transparent,var(--gold-light));flex:none}
-.brand__role::after{background:linear-gradient(270deg,transparent,var(--gold-light))}
 .nav{display:flex;gap:22px}
 .nav a{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:600;font-size:13px;color:rgba(5,5,5,.72);text-decoration:none;transition:color .3s var(--ease)}
 .nav__ic{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;flex:none;color:var(--green);border:1px solid rgba(45,90,55,.16);background:linear-gradient(135deg,rgba(255,255,255,.7),rgba(255,255,255,.25));box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 1px 2px rgba(45,90,55,.05);transition:all .35s var(--ease)}
@@ -140,7 +138,6 @@ section,footer{position:relative}
   .brand__name{font-size:19px}
   .brand{gap:5px}
   .brand__role{font-size:8.5px;letter-spacing:.24em}
-  .brand__role::before,.brand__role::after{width:12px}
   .header .btn--sm{padding:12px 16px;min-height:44px;font-size:12px;white-space:nowrap}
   .cta-full{display:none}
   .cta-short{display:inline}
@@ -658,8 +655,7 @@ section,footer{position:relative}
 .footer__col a:hover{color:var(--terra)}
 .brand--footer{align-items:flex-start;gap:8px}
 .brand--footer .brand__name{font-size:27px}
-.brand--footer .brand__role::before{display:none}
-@media (max-width:860px){.brand--footer{align-items:center}.brand--footer .brand__role::before{display:block}}
+@media (max-width:860px){.brand--footer{align-items:center}}
 .footer__brand p{margin:12px 0 0;max-width:340px;line-height:1.7;font-size:14.5px;color:rgba(5,5,5,.66)}
 .footer__title{font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
 .social-links{display:flex;gap:10px;flex-wrap:wrap}
