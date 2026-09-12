@@ -56,6 +56,8 @@ h1,h2,h3{text-wrap:pretty}
 /* clip (não hidden): recorta as folhas sem criar contexto de rolagem, o que mataria o sticky */
 .wrap{overflow:hidden;overflow:clip}
 section,footer{position:relative}
+section[id],footer[id]{scroll-margin-top:84px}
+@media (max-width:520px){section[id]{scroll-margin-top:72px}}
 
 .eyebrow{font-family:var(--display);font-weight:600;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);margin:0 0 16px}
 .eyebrow--green{color:var(--green)}
@@ -1329,6 +1331,23 @@ section,footer{position:relative}
     popClose.addEventListener('click', hideChat);
     ckAll.addEventListener('click', function(){ decideCookie('all'); });
     ckEss.addEventListener('click', function(){ decideCookie('essential'); });
+  })();
+
+  // ---------- Atualizar a página abre no topo; links internos não deixam #âncora na URL ----------
+  (function(){
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    if (!location.hash) window.scrollTo(0, 0);
+    document.addEventListener('click', function(e){
+      var a = e.target.closest('a[href^="#"]');
+      if (!a) return;
+      var id = a.getAttribute('href').slice(1);
+      var target = id ? document.getElementById(id) : null;
+      if (!target && id !== 'top') return;
+      e.preventDefault();
+      if (id === 'top' || !target) window.scrollTo({ top: 0, behavior: 'smooth' });
+      else target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', location.pathname + location.search);
+    });
   })();
 
   // ---------- Ano do rodapé ----------
