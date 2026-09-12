@@ -82,6 +82,9 @@ section[id],footer[id]{scroll-margin-top:84px}
 .h1-em{font-style:italic;font-weight:400;background:linear-gradient(90deg,#c59b5f,#dfba81 55%,#a8813f);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.04em}
 .h2{letter-spacing:-.005em;line-height:1.2}
 .lead{font-size:17px;line-height:1.8;color:rgba(5,5,5,.74);margin:0}
+/* Palavras de impacto: negrito na cor da marca conforme o fundo */
+.hero__sub strong,.compare__desc strong,.lead strong,.tl__card p strong,.quiz__desc strong,.acc__panel p strong,.social__desc strong,.footer__sub strong{font-weight:700;color:var(--green)}
+.book__desc strong{font-weight:700;color:#fff}
 
 /* Curva divisória entre seções */
 .curve{display:block;width:100%;height:clamp(36px,7vw,90px);position:relative;z-index:1}
@@ -896,7 +899,7 @@ section[id],footer[id]{scroll-margin-top:84px}
       <div data-reveal="up">
         <p class="hero__pill"><span class="gpill"><i class="gpill__dot gpill__dot--live" aria-hidden="true"></i>Emagrecimento e saúde intestinal</span></p>
         <h1><span class="h1-l1">O fim do efeito sanfona</span> <span class="h1-l2">começa pelo <em class="h1-em">seu intestino.</em></span></h1>
-        <p class="hero__sub">Se você já emagreceu e voltou a engordar, ou faz tudo certo e o peso não desce, o problema não é a sua força de vontade. Com o intestino regulado e um plano 100% feito para a sua rotina, o seu corpo volta a responder. <span class="hero__sub-br">Sem passar fome e sem cortar o que você gosta.</span></p>
+        <p class="hero__sub">Se você já <strong>emagreceu e voltou a engordar</strong>, ou faz tudo certo e o <strong>peso não desce</strong>, o problema não é a sua força de vontade. Com o <strong>intestino regulado</strong> e um plano <strong>100% feito para a sua rotina</strong>, o seu corpo volta a responder. <span class="hero__sub-br">Sem passar fome e sem cortar o que você gosta.</span></p>
         <a href="#agendar" class="btn btn--lg"><span class="shine"></span>Agendar Minha Consulta Online <span class="btn__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6.5 5.5 5.5-5.5 5.5"/></svg></span></a>
         <p class="hero__micro"><span>Atendimento online para todo o Brasil</span><span class="hero__micro-sep"> • </span><span>Retorno em até 24h</span></p>
         <div class="hero__proof">
@@ -973,7 +976,7 @@ section[id],footer[id]{scroll-margin-top:84px}
   <div class="container compare__in">
     <p class="eyebrow" data-reveal="up">Por que desta vez vai ser diferente</p>
     <h2 class="h2 h2--split" data-reveal="up" style="--rd:.08s"><span>Mais uma dieta ou tratar</span> <span>a causa de uma vez?</span></h2>
-    <p class="compare__desc" data-reveal="up" style="--rd:.16s">Você já sabe o que acontece quando corta tudo e segura na força de vontade: funciona até a primeira festa. O caminho que dura é outro.</p>
+    <p class="compare__desc" data-reveal="up" style="--rd:.16s">Você já sabe o que acontece quando <strong>corta tudo</strong> e segura na força de vontade: funciona até a <strong>primeira festa</strong>. O caminho que dura é outro.</p>
 
     <div class="cmpx" id="cmpx" data-reveal="scale">
       <div class="cmpx__toggle" role="tablist" aria-label="Comparar abordagens">
@@ -1027,7 +1030,7 @@ section[id],footer[id]{scroll-margin-top:84px}
       <div data-reveal="right" style="--rd:.1s">
         <p class="eyebrow" style="margin-bottom:18px">Quem vai te acompanhar</p>
         <h2 class="h2"><span class="about__h2-l1">Prazer, Kamilla Fertonani.</span> <span class="about__h2-l2"><span>Nutricionista de mais de 1.000 mulheres</span> <span>que pararam de brigar com a balança.</span></span></h2>
-        <p class="lead">Sou nutricionista especialista em emagrecimento definitivo e saúde intestinal. Depois de mais de 1.000 pacientes, aprendi uma coisa: quase toda mulher que "não consegue emagrecer" tem, na verdade, um intestino que ainda não foi tratado. Meu trabalho é regular esse intestino e montar um plano que cabe na sua vida real: no seu bolso, no seu gosto e no seu tempo.</p>
+        <p class="lead">Sou nutricionista especialista em <strong>emagrecimento definitivo</strong> e <strong>saúde intestinal</strong>. Depois de mais de 1.000 pacientes, aprendi uma coisa: quase toda mulher que "não consegue emagrecer" tem, na verdade, um <strong>intestino que ainda não foi tratado</strong>. Meu trabalho é regular esse intestino e montar um plano que cabe na sua vida real: <strong>no seu bolso, no seu gosto e no seu tempo</strong>.</p>
         <ul class="checks">
           <li><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></i><span><strong>Plano 100% individualizado</strong>, com comida de verdade e que cabe no seu bolso.</span></li>
           <li><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></i><span><strong>Modulação intestinal</strong> para destravar o metabolismo e acabar com o estufamento.</span></li>
@@ -1057,7 +1060,7 @@ section[id],footer[id]{scroll-margin-top:84px}
             <span class="tl__tag">Etapa 01</span>
           </div>
           <h3>Consulta detalhada</h3>
-          <p>Uma conversa a fundo sobre a sua rotina, exames, sintomas intestinais e histórico. É aqui que descobrimos o que está travando o seu emagrecimento.</p>
+          <p>Uma conversa a fundo sobre a sua rotina, exames, sintomas intestinais e histórico. É aqui que descobrimos <strong>o que está travando o seu emagrecimento</strong>.</p>
         </div>
         <div class="tl__spine"><span class="tl__dot" data-tl-dot><i>1</i></span></div>
       </div>
@@ -1070,7 +1073,7 @@ section[id],footer[id]{scroll-margin-top:84px}
             <span class="tl__tag">Etapa 02</span>
           </div>
           <h3>Plano individualizado</h3>
-          <p>Você recebe pelo aplicativo um cardápio feito para você: no seu bolso, com os alimentos que você gosta e o tempo que você tem. Sem passar fome.</p>
+          <p>Você recebe pelo aplicativo um <strong>cardápio feito para você</strong>: no seu bolso, com os alimentos que você gosta e o tempo que você tem. <strong>Sem passar fome.</strong></p>
         </div>
       </div>
 
@@ -1081,7 +1084,7 @@ section[id],footer[id]{scroll-margin-top:84px}
             <span class="tl__tag">Etapa 03</span>
           </div>
           <h3>Acompanhamento contínuo</h3>
-          <p>Ajustamos a rota conforme o seu corpo responde, tiramos as dúvidas do dia a dia e mantemos você firme até a meta. E depois dela.</p>
+          <p>Ajustamos a rota conforme o seu corpo responde, tiramos as dúvidas do dia a dia e mantemos você <strong>firme até a meta</strong>. E depois dela.</p>
         </div>
         <div class="tl__spine"><span class="tl__dot tl__dot--end" data-tl-dot><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></i></span></div>
       </div>
@@ -1158,7 +1161,7 @@ section[id],footer[id]{scroll-margin-top:84px}
       <div data-reveal="up">
         <p class="eyebrow">Resultados reais</p>
         <h2 class="h2">Quem passa pelo processo, aprova</h2>
-        <p class="social__desc">Mulheres que pararam de fazer dieta, trataram a causa e recuperaram a saúde, a energia e o peso que queriam.</p>
+        <p class="social__desc">Mulheres que pararam de fazer dieta, <strong>trataram a causa</strong> e recuperaram a saúde, a energia e <strong>o peso que queriam</strong>.</p>
       </div>
       <div class="social__ctrl" data-reveal="up" style="--rd:.12s">
         <button class="arrow arrow--prev" id="prevBtn" aria-label="Anterior">←</button>
@@ -1183,7 +1186,7 @@ section[id],footer[id]{scroll-margin-top:84px}
       <div data-reveal="left">
         <p class="eyebrow">Teste rápido</p>
         <h2 class="h2">Como está o seu intestino hoje?</h2>
-        <p class="quiz__desc">Responda 5 perguntas em menos de 1 minuto e descubra se o seu intestino pode estar travando o seu emagrecimento.</p>
+        <p class="quiz__desc">Responda <strong>5 perguntas em menos de 1 minuto</strong> e descubra se o seu intestino pode estar <strong>travando o seu emagrecimento</strong>.</p>
         <div class="quiz__meta"><span><i></i>5 perguntas</span><span><i></i>Resultado na hora</span><span><i></i>Sem cadastro</span></div>
       </div>
 
@@ -1241,15 +1244,15 @@ section[id],footer[id]{scroll-margin-top:84px}
         </div>
         <div class="acc">
           <button class="acc__btn" aria-expanded="false"><h3>Vou precisar cortar tudo o que eu gosto de comer?</h3><span class="acc__icon" aria-hidden="true">+</span></button>
-          <div class="acc__panel"><div><p>Não. Dieta que corta tudo é a que você já tentou e não durou. O plano é montado para a sua vida real e inclui os alimentos que você ama de forma estratégica, para você conseguir manter o resultado sem sofrer.</p></div></div>
+          <div class="acc__panel"><div><p><strong>Não.</strong> Dieta que corta tudo é a que você já tentou e não durou. O plano é montado para a sua vida real e inclui os alimentos que você ama de forma estratégica, para você conseguir manter o resultado sem sofrer.</p></div></div>
         </div>
         <div class="acc">
           <button class="acc__btn" aria-expanded="false"><h3>Uso canetinha (Ozempic, Mounjaro) e meu intestino travou. Você atende esse caso?</h3><span class="acc__icon" aria-hidden="true">+</span></button>
-          <div class="acc__panel"><div><p>Sim, e é um dos casos mais comuns no consultório. A canetinha reduz o apetite, mas sem um plano alimentar adequado o intestino trava, o peso estaciona e você perde massa magra em vez de gordura. O acompanhamento nutricional ajusta fibras, hidratação e proteínas para o intestino voltar a funcionar e o resultado continuar.</p></div></div>
+          <div class="acc__panel"><div><p>Sim, e é um dos casos mais comuns no consultório. A canetinha reduz o apetite, mas sem um plano alimentar adequado <strong>o intestino trava, o peso estaciona</strong> e você perde massa magra em vez de gordura. O acompanhamento nutricional ajusta fibras, hidratação e proteínas para o intestino voltar a funcionar e o resultado continuar.</p></div></div>
         </div>
         <div class="acc">
           <button class="acc__btn" aria-expanded="false"><h3>Em quanto tempo vejo os primeiros resultados?</h3><span class="acc__icon" aria-hidden="true">+</span></button>
-          <div class="acc__panel"><div><p>Os primeiros sinais costumam aparecer nas primeiras duas semanas: menos estufamento, intestino mais regular e mais disposição ao longo do dia. A perda de peso e de medidas vem na sequência e varia de pessoa para pessoa, por isso o plano é ajustado ao longo do acompanhamento.</p></div></div>
+          <div class="acc__panel"><div><p>Os primeiros sinais costumam aparecer <strong>nas primeiras duas semanas</strong>: menos estufamento, intestino mais regular e mais disposição ao longo do dia. A perda de peso e de medidas vem na sequência e varia de pessoa para pessoa, por isso o plano é ajustado ao longo do acompanhamento.</p></div></div>
         </div>
         <div class="acc">
           <button class="acc__btn" aria-expanded="false"><h3>O que é modulação intestinal?</h3><span class="acc__icon" aria-hidden="true">+</span></button>
@@ -1257,7 +1260,7 @@ section[id],footer[id]{scroll-margin-top:84px}
         </div>
         <div class="acc">
           <button class="acc__btn" aria-expanded="false"><h3>Estou na perimenopausa ou menopausa. O método funciona para mim?</h3><span class="acc__icon" aria-hidden="true">+</span></button>
-          <div class="acc__panel"><div><p>Sim. Grande parte das minhas pacientes tem mais de 40 anos e chega com a sensação de que "nada mais funciona". Nessa fase as mudanças hormonais afetam o intestino, o sono e a distribuição de gordura, e o plano é construído levando tudo isso em conta.</p></div></div>
+          <div class="acc__panel"><div><p>Sim. Grande parte das minhas pacientes tem <strong>mais de 40 anos</strong> e chega com a sensação de que "nada mais funciona". Nessa fase as mudanças hormonais afetam o intestino, o sono e a distribuição de gordura, e o plano é construído levando tudo isso em conta.</p></div></div>
         </div>
         <div class="acc">
           <button class="acc__btn" aria-expanded="false"><h3>Preciso levar exames na primeira consulta?</h3><span class="acc__icon" aria-hidden="true">+</span></button>
@@ -1277,7 +1280,7 @@ section[id],footer[id]{scroll-margin-top:84px}
     <div class="book__head" data-reveal="up">
       <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Solicitar agendamento</span>
       <h2 class="h2 h2--light" style="margin-bottom:18px">Dê o primeiro passo hoje</h2>
-      <p class="book__desc">Preencha os dados e eu entro em contato em até 24h para confirmar o seu horário. Atendimento online para todo o Brasil.</p>
+      <p class="book__desc">Preencha os dados e eu entro em contato <strong>em até 24h</strong> para confirmar o seu horário. <strong>Atendimento online para todo o Brasil.</strong></p>
     </div>
 
     <form class="form" id="bookForm" novalidate data-reveal="scale" style="--rd:.1s">
@@ -1318,7 +1321,7 @@ section[id],footer[id]{scroll-margin-top:84px}
   <div class="container footer__in">
     <div class="footer__cta">
       <h2 class="h2" data-reveal="up">Você já tentou de tudo. Agora, emagreça <em>pela última vez</em>.</h2>
-      <p class="footer__sub" data-reveal="up" style="--rd:.08s">Trate a causa, regule o intestino e pare de recomeçar toda segunda-feira.</p>
+      <p class="footer__sub" data-reveal="up" style="--rd:.08s"><strong>Trate a causa</strong>, regule o intestino e pare de <strong>recomeçar toda segunda-feira</strong>.</p>
       <a href="#agendar" class="btn btn--xl" data-reveal="up" style="--rd:.16s"><span class="shine"></span>Agendar Minha Consulta Agora</a>
     </div>
 
