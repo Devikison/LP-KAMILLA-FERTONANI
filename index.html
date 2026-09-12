@@ -192,7 +192,8 @@ section[id],footer[id]{scroll-margin-top:84px}
 .hero__img{margin-top:8px}
 .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,4.6vw,64px);line-height:1.06;letter-spacing:-.018em;margin:0 0 28px;color:var(--green)}
 .hero__sub{font-size:18px;line-height:1.75;color:rgba(5,5,5,.72);margin:0 0 40px;max-width:520px;text-wrap:pretty}
-.hero__sub-br{display:block;margin-top:6px;color:var(--green);font-weight:500}
+.hero__sub-br{display:block;margin-top:10px;font-family:var(--serif);font-size:1.22em;line-height:1.3;letter-spacing:-.005em;color:var(--green);font-weight:400}
+.hero__sub-br::after{content:"";display:block;width:56px;height:2px;margin-top:10px;border-radius:2px;background:linear-gradient(90deg,var(--gold),var(--gold-light))}
 .hero__eyebrow{margin-bottom:24px}
 .hero__micro{font-family:var(--display);font-weight:600;font-size:12px;letter-spacing:.04em;color:var(--green);margin:16px 0 0;opacity:.85}
 /* Prova social em pílula */
@@ -724,6 +725,7 @@ section[id],footer[id]{scroll-margin-top:84px}
   /* Hero */
   .hero__grid > div[data-reveal]{text-align:center}
   .hero__pill{justify-content:center}
+  .hero__sub-br::after{margin-left:auto;margin-right:auto}
   .hero__sub{margin-left:auto;margin-right:auto}
   .hero__micro span{display:block}
   .hero__micro .hero__micro-sep{display:none}
