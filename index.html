@@ -73,7 +73,7 @@ section,footer{position:relative}
 .curve{display:block;width:100%;height:clamp(36px,7vw,90px);position:relative;z-index:1}
 
 /* Placeholder de imagem (trocar por <img>) */
-.ph{background:var(--placeholder);display:flex;align-items:center;justify-content:center;text-align:center;color:#000;font-weight:700;font-size:15px;line-height:1.5;padding:16px}
+.ph{background:var(--placeholder);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#000;font-weight:700;font-size:15px;line-height:1.5;padding:16px}
 .ph img{width:100%;height:100%;object-fit:cover}
 .ph small{display:block;margin-top:8px;font-weight:500;font-size:12px;opacity:.7;font-family:var(--display);letter-spacing:.04em}
 .card__media .card__phtext{padding:0 22px;font-size:13.5px}
@@ -506,10 +506,12 @@ section,footer{position:relative}
 .arrow--next{border:0;background:linear-gradient(135deg,#1e6b42,#3c9a68);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 8px 20px rgba(60,154,104,.35)}
 .arrow--next:hover{transform:translateY(-2px);box-shadow:0 0 0 4px rgba(223,186,129,.35),0 12px 26px rgba(60,154,104,.45)}
 .arrow:active{transform:scale(.95)}
-.slider{display:flex;gap:24px;margin-top:48px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:8px var(--gutter) 24px 0;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.slider{display:flex;gap:24px;margin-top:32px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:24px var(--gutter) 64px 0;margin-bottom:-24px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .slider::-webkit-scrollbar{display:none}
-.slide{flex:none;width:min(350px,78vw);aspect-ratio:350/450;scroll-snap-align:start;border-radius:28px;overflow:hidden;box-shadow:0 4px 8px rgba(5,5,5,.04),0 18px 40px rgba(196,124,106,.16),0 40px 70px -30px rgba(5,5,5,.2)}
-@media (max-width:860px){.slider{margin-top:32px;gap:16px}}
+.slide{position:relative;flex:none;width:min(350px,78vw);aspect-ratio:350/450;scroll-snap-align:start;border-radius:28px;overflow:hidden;box-shadow:0 1px 2px rgba(45,90,55,.04),0 12px 28px -12px rgba(45,90,55,.14),0 30px 60px -28px rgba(45,90,55,.22);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.slide:hover{transform:translateY(-4px);box-shadow:0 1px 2px rgba(45,90,55,.04),0 16px 34px -12px rgba(45,90,55,.18),0 40px 80px -28px rgba(45,90,55,.28)}
+.slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media (max-width:860px){.slider{margin-top:20px;gap:16px;padding-top:16px;padding-bottom:48px;margin-bottom:-16px}}
 
 /* =========================================================
    S5b QUIZ INTESTINAL
@@ -1090,9 +1092,9 @@ section,footer{position:relative}
       </div>
     </div>
     <div class="slider" id="slider" data-reveal-children="right" data-reveal-step="0.12">
-      <div class="slide ph">Print de conversa no WhatsApp com depoimento de paciente<br><small>depoimento-0X.jpg · 350 x 450px</small></div>
-      <div class="slide ph">Print de conversa no WhatsApp com depoimento de paciente<br><small>depoimento-0X.jpg · 350 x 450px</small></div>
-      <div class="slide ph">Print de conversa no WhatsApp com depoimento de paciente<br><small>depoimento-0X.jpg · 350 x 450px</small></div>
+      <div class="slide ph"><span>Print de conversa no WhatsApp com depoimento de paciente</span><small>depoimento-01.jpg · 350 x 450px</small><img src="assets/depoimento-01.jpg" alt="Depoimento de paciente no WhatsApp" loading="lazy" onerror="this.remove()"></div>
+      <div class="slide ph"><span>Print de conversa no WhatsApp com depoimento de paciente</span><small>depoimento-02.jpg · 350 x 450px</small><img src="assets/depoimento-02.jpg" alt="Depoimento de paciente no WhatsApp" loading="lazy" onerror="this.remove()"></div>
+      <div class="slide ph"><span>Print de conversa no WhatsApp com depoimento de paciente</span><small>depoimento-03.jpg · 350 x 450px</small><img src="assets/depoimento-03.jpg" alt="Depoimento de paciente no WhatsApp" loading="lazy" onerror="this.remove()"></div>
     </div>
   </div>
 </section>
