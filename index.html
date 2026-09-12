@@ -402,25 +402,27 @@ section[id],footer[id]{scroll-margin-top:84px}
 .method__in{position:relative;z-index:1;padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(80px,10vw,140px)}
 .method .eyebrow,.method .h2{text-align:center}
 .method .h2{margin:0 auto 64px;max-width:680px}
-.timeline{position:relative;max-width:940px;margin:0 auto;display:grid;gap:14px;--spine:56px;--dot-y:38px}
-/* Trilho contínuo: fundo pontilhado + preenchimento que cresce com o scroll (JS) */
-.timeline__track{position:absolute;top:var(--dot-y);bottom:var(--dot-y);left:50%;width:3px;margin-left:-1.5px;border-radius:3px;background:repeating-linear-gradient(180deg,rgba(107,142,115,.55) 0 6px,transparent 6px 14px);z-index:0}
-.timeline__fill{position:absolute;left:0;top:0;width:100%;height:0;border-radius:3px;background:linear-gradient(180deg,var(--green-bright),var(--green) 60%,var(--gold-light));box-shadow:0 0 12px rgba(60,154,104,.45);transition:height .15s linear}
-.timeline__fill::after{content:"";position:absolute;left:50%;bottom:-6px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--gold-light);box-shadow:0 0 0 4px rgba(223,186,129,.3),0 0 16px rgba(223,186,129,.7)}
+.timeline{position:relative;max-width:940px;margin:0 auto;display:grid;gap:14px;--spine:56px;--dot-y:40px;--dot:40px}
+/* Trilho: tubo de vidro + preenchimento que cresce com o scroll (JS) */
+.timeline__track{position:absolute;top:var(--dot-y);bottom:var(--dot-y);left:50%;width:8px;margin-left:-4px;border-radius:8px;background:linear-gradient(90deg,rgba(45,90,55,.06),rgba(45,90,55,.14),rgba(45,90,55,.06));box-shadow:inset 0 0 0 1px rgba(255,255,255,.7),inset 0 1px 2px rgba(45,90,55,.12),0 1px 0 rgba(255,255,255,.8);z-index:0}
+.timeline__fill{position:absolute;left:1px;top:0;width:6px;height:0;border-radius:6px;background:linear-gradient(180deg,#5fb98a 0%,#3c9a68 35%,#2d5a37 70%,#dfba81 100%);box-shadow:0 0 14px rgba(60,154,104,.5),inset 0 1px 0 rgba(255,255,255,.35);transition:height .15s linear}
+.timeline__fill::after{content:"";position:absolute;left:50%;bottom:-7px;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff7e2,#dfba81 60%,#c59b5f);box-shadow:0 0 0 5px rgba(223,186,129,.25),0 0 18px rgba(223,186,129,.85)}
 .tl{position:relative;display:grid;grid-template-columns:1fr var(--spine) 1fr;gap:24px;align-items:start;z-index:1}
 .tl--left .tl__card{grid-column:1;text-align:right}
 .tl--right .tl__card{grid-column:3}
-.tl__spine{grid-column:2;grid-row:1;display:flex;justify-content:center;padding-top:calc(var(--dot-y) - 13px)}
-/* Pontos: apagados até o preenchimento chegar neles */
-.tl__dot{width:26px;height:26px;border-radius:50%;background:#fff;border:2px solid rgba(107,142,115,.45);display:grid;place-items:center;box-shadow:0 4px 10px rgba(45,90,55,.12);transition:all .45s var(--ease);flex:none}
-.tl__dot i{width:10px;height:10px;border-radius:50%;background:rgba(107,142,115,.45);display:grid;place-items:center;transition:all .45s var(--ease);color:#fff}
-.tl__dot i svg{width:12px;height:12px;opacity:0;transition:opacity .3s}
-.tl__dot.is-lit{border-color:transparent;background:linear-gradient(135deg,var(--green-bright),var(--green));box-shadow:0 0 0 6px rgba(60,154,104,.18),0 8px 18px rgba(45,90,55,.35);transform:scale(1.15)}
-.tl__dot.is-lit i{background:#fff}
-.tl__dot--end.is-lit{background:linear-gradient(135deg,var(--gold-light),var(--gold));box-shadow:0 0 0 6px rgba(223,186,129,.25),0 8px 18px rgba(197,155,95,.4)}
-.tl__dot--end i{width:16px;height:16px;background:transparent}
-.tl__dot--end.is-lit i{background:transparent}
-.tl__dot--end.is-lit i svg{opacity:1}
+.tl__spine{grid-column:2;grid-row:1;display:flex;justify-content:center;padding-top:calc(var(--dot-y) - var(--dot) / 2)}
+/* Medalhões: vidro apagado até o preenchimento chegar neles */
+.tl__dot{width:var(--dot);height:var(--dot);border-radius:50%;display:grid;place-items:center;background:linear-gradient(160deg,rgba(255,255,255,.95),rgba(255,255,255,.7));border:1px solid rgba(45,90,55,.18);box-shadow:inset 0 1px 0 #fff,0 6px 14px -6px rgba(45,90,55,.35),0 0 0 6px rgba(231,237,232,.9);transition:all .5s var(--ease);flex:none;position:relative}
+.tl__dot i{font-style:normal;font-family:var(--display);font-weight:700;font-size:14px;color:rgba(45,90,55,.55);transition:all .4s var(--ease);display:grid;place-items:center;line-height:1}
+.tl__dot i svg{width:16px;height:16px}
+.tl__dot::before{content:"";position:absolute;inset:-9px;border-radius:50%;border:1px dashed rgba(107,142,115,.45);opacity:0;transform:scale(.8);transition:all .5s var(--ease)}
+.tl__dot.is-lit{background:linear-gradient(135deg,#3c9a68,#2d5a37);border-color:transparent;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 0 0 6px rgba(255,255,255,.9),0 0 0 7px rgba(60,154,104,.25),0 10px 22px rgba(45,90,55,.35);transform:scale(1.08)}
+.tl__dot.is-lit i{color:#fff}
+.tl__dot.is-lit::before{opacity:1;transform:scale(1);animation:kfSpin 30s linear infinite}
+.tl__dot--end.is-lit{background:linear-gradient(135deg,#dfba81,#c59b5f);box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 0 0 6px rgba(255,255,255,.9),0 0 0 7px rgba(223,186,129,.35),0 10px 22px rgba(197,155,95,.4)}
+.tl__dot--end i{color:rgba(197,155,95,.7)}
+.tl__dot--end.is-lit i{color:#fff}
+.tl__dot--end.is-lit::before{border-color:rgba(223,186,129,.6)}
 /* Cards */
 .tl__card{position:relative;background:linear-gradient(180deg,#ffffff 0%,#f9f7f6 100%);border:1px solid rgba(255,255,255,.95);border-radius:28px;padding:30px 34px 32px;box-shadow:inset 0 1px 0 #fff,0 2px 4px rgba(45,90,55,.05),0 18px 40px -12px rgba(45,90,55,.2);transition:all .35s var(--ease);overflow:hidden}
 .tl__card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--green-bright),var(--green) 55%,var(--gold-light))}
@@ -436,7 +438,9 @@ section[id],footer[id]{scroll-margin-top:84px}
 .tl__card p{font-size:15px;line-height:1.75;color:rgba(5,5,5,.7);margin:0;position:relative}
 .method__cta{text-align:center;margin-top:64px}
 @media (max-width:860px){
-  .timeline{--spine:40px;--dot-y:34px;gap:16px}
+  .timeline{--spine:44px;--dot-y:34px;--dot:34px;gap:16px}
+  .tl__dot i{font-size:12px}
+  .tl__dot::before{inset:-7px}
   .timeline__track{left:calc(var(--spine) / 2)}
   .tl{grid-template-columns:var(--spine) 1fr;gap:16px}
   .tl__spine{grid-column:1;grid-row:1}
@@ -1022,11 +1026,11 @@ section[id],footer[id]{scroll-margin-top:84px}
           <h3>Consulta detalhada</h3>
           <p>Uma conversa a fundo sobre a sua rotina, exames, sintomas intestinais e histórico. É aqui que descobrimos o que está travando o seu emagrecimento.</p>
         </div>
-        <div class="tl__spine"><span class="tl__dot" data-tl-dot><i></i></span></div>
+        <div class="tl__spine"><span class="tl__dot" data-tl-dot><i>1</i></span></div>
       </div>
 
       <div class="tl tl--right">
-        <div class="tl__spine"><span class="tl__dot" data-tl-dot><i></i></span></div>
+        <div class="tl__spine"><span class="tl__dot" data-tl-dot><i>2</i></span></div>
         <div class="tl__card" data-reveal="right">
           <div class="tl__head">
             <span class="tl__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M11 5.5h2"/><path d="M9.5 10h5M9.5 13h5M9.5 16h3"/></svg></span>
