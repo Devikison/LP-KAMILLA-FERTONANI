@@ -339,7 +339,8 @@ section,footer{position:relative}
 .about__in{position:relative;z-index:1;padding-top:clamp(48px,7vw,96px);padding-bottom:clamp(80px,10vw,140px)}
 .about__grid{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:72px;align-items:center}
 .about__media{position:relative}
-.about__img{border-radius:220px 220px 36px 36px;aspect-ratio:550/650;overflow:hidden;box-shadow:0 6px 12px rgba(5,5,5,.05),0 30px 60px rgba(5,5,5,.1)}
+.about__img{border-radius:220px 220px 36px 36px;aspect-ratio:550/650;overflow:hidden;background:#e7ede8;box-shadow:0 6px 12px rgba(5,5,5,.05),0 30px 60px rgba(5,5,5,.1)}
+.about__img img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
 .about__badge{position:absolute;right:-12px;bottom:36px;background:rgba(255,255,255,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.9);border-radius:20px;padding:16px 22px;box-shadow:inset 0 1px 0 #fff,0 16px 36px rgba(45,90,55,.14)}
 .about__badge b{display:block;font-family:var(--serif);font-weight:600;font-size:30px;line-height:1;color:var(--green)}
 .about__badge span{display:block;font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(5,5,5,.6);margin-top:6px}
@@ -936,7 +937,7 @@ section,footer{position:relative}
   <div class="container about__in">
     <div class="about__grid">
       <div class="about__media" data-reveal="left">
-        <div class="about__img ph">Kamilla em atendimento, conversando com paciente ou no notebook<br><small>sobre-kamilla.jpg · 550 x 650px</small></div>
+        <div class="about__img"><img src="assets/hero-kamilla.jpg" alt="Kamilla Fertonani em seu consultório" width="550" height="650" loading="lazy"></div>
         <div class="about__badge"><b>+1.000</b><span>pacientes transformadas</span></div>
       </div>
       <div data-reveal="right" style="--rd:.1s">
