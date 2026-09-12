@@ -157,7 +157,15 @@ section[id],footer[id]{scroll-margin-top:84px}
 @keyframes kfFloat{from{transform:translateY(-14px) rotate(-8deg)}to{transform:translateY(14px) rotate(10deg)}}
 @keyframes kfSpin{to{transform:rotate(360deg)}}
 @keyframes kfSpinRev{to{transform:rotate(-360deg)}}
-@media (max-width:860px){.leaf--desk{display:none}}
+/* Mobile: folhas menores, mais visíveis e dentro da tela */
+@media (max-width:860px){
+  .leaf--desk{width:60px;height:60px}
+  .leaf{opacity:.5!important;filter:blur(.8px)!important}
+  .leaf--light{opacity:.2!important}
+  .leaf--gold{opacity:.55!important}
+  .hero__in > svg.leaf:nth-of-type(1){right:6px!important;width:56px;height:56px}
+  .hero__in > svg.leaf:nth-of-type(3){left:-6px!important;width:64px;height:64px}
+}
 @media (prefers-reduced-motion:reduce){
   .leaf,.orbit__ring,.orbit__dot{animation:none!important}
   html{scroll-behavior:auto}
