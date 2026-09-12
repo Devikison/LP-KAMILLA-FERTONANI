@@ -938,7 +938,7 @@ section,footer{position:relative}
     <div class="about__grid">
       <div class="about__media" data-reveal="left">
         <div class="about__img"><img src="assets/hero-kamilla.jpg" alt="Kamilla Fertonani em seu consultório" width="550" height="650" loading="lazy"></div>
-        <div class="about__badge"><b>+1.000</b><span>pacientes transformadas</span></div>
+        <div class="about__badge"><b data-count="1000" data-prefix="+" data-duration="2600">+1.000</b><span>pacientes transformadas</span></div>
       </div>
       <div data-reveal="right" style="--rd:.1s">
         <p class="eyebrow" style="margin-bottom:18px">Quem vai te acompanhar</p>
@@ -1399,6 +1399,36 @@ section,footer{position:relative}
     syncNow();
     window.addEventListener('load', syncNow);
     window.addEventListener('pageshow', syncNow);
+  })();
+
+  // ---------- Contadores (ex.: +1.000): sobem em câmera lenta ao entrar na tela ----------
+  (function(){
+    var els = document.querySelectorAll('[data-count]');
+    if (!els.length) return;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function fmt(n){ return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }
+    function run(el){
+      var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+      var prefix = el.getAttribute('data-prefix') || '';
+      var suffix = el.getAttribute('data-suffix') || '';
+      var dur = parseInt(el.getAttribute('data-duration'), 10) || 2200;
+      if (reduce) { el.textContent = prefix + fmt(target) + suffix; return; }
+      var t0 = null;
+      function tick(ts){
+        if (!t0) t0 = ts;
+        var p = Math.min(1, (ts - t0) / dur);
+        var e = 1 - Math.pow(1 - p, 4);        // desacelera bem no final
+        el.textContent = prefix + fmt(Math.round(target * e)) + suffix;
+        if (p < 1) requestAnimationFrame(tick); else el.textContent = prefix + fmt(target) + suffix;
+      }
+      el.textContent = prefix + '0' + suffix;
+      requestAnimationFrame(tick);
+    }
+    if (!('IntersectionObserver' in window)) { els.forEach(run); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting) { io.unobserve(en.target); run(en.target); } });
+    }, { threshold: 0.6 });
+    els.forEach(function(el){ io.observe(el); });
   })();
 
   // ---------- Comparativo: toggle Antes / Agora ----------
