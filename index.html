@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kamilla Fertonani | Nutricionista — Emagrecimento Definitivo pela Saúde Intestinal</title>
+<meta name="description" content="Intestino regulado é corpo que emagrece. Consulta online com a nutricionista Kamilla Fertonani: plano 100% personalizado, sem passar fome, com mais de 1.000 pacientes transformadas. Agende sua consulta.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232d5a37'/%3E%3Cpath d='M16 48C16 30 30 16 48 16 48 34 34 48 16 48Z' fill='%23dfba81'/%3E%3Cpath d='M16 48 48 16' stroke='%232d5a37' stroke-width='2.5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* =========================================================
+   TOKENS
+   ========================================================= */
+:root{
+  --bg:#f7f5f4;
+  --ink:#050505;
+  --green:#2d5a37;
+  --green-deep:#234a2c;
+  --green-bright:#3c9a68;
+  --sage:#6b8e73;
+  --sage-light:#e7ede8;
+  --terra:#c47c6a;
+  --rose:#f4e6e1;
+  --gold:#c59b5f;
+  --gold-light:#dfba81;
+  --placeholder:#FFDE4D;
+  --serif:'DM Serif Display',Georgia,'Times New Roman',serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --display:'Montserrat',system-ui,sans-serif;
+  --container:1200px;
+  --gutter:clamp(20px,5vw,48px);
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+/* Barra de rolagem da página (Chrome/Edge/Safari + Firefox) */
+html{scrollbar-width:thin;scrollbar-color:#3c9a68 #ece9e6}
+::-webkit-scrollbar{width:11px;height:11px}
+::-webkit-scrollbar-track{background:#ece9e6;border-left:1px solid rgba(45,90,55,.08)}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#5fb98a,#3c9a68 45%,#2d5a37);border-radius:999px;border:2.5px solid #ece9e6;box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
+::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,#dfba81,#c59b5f 55%,#a8813f)}
+::-webkit-scrollbar-thumb:active{background:linear-gradient(180deg,#2d5a37,#234a2c)}
+::-webkit-scrollbar-button{display:none;height:0;width:0}
+::-webkit-scrollbar-corner{background:#ece9e6}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--green)}
+img{max-width:100%;display:block}
+h1,h2,h3{text-wrap:pretty}
+.container{max-width:var(--container);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+/* clip (não hidden): recorta as folhas sem criar contexto de rolagem, o que mataria o sticky */
+.wrap{overflow:hidden;overflow:clip}
+section,footer{position:relative}
+
+.eyebrow{font-family:var(--display);font-weight:600;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);margin:0 0 16px}
+.eyebrow--green{color:var(--green)}
+.eyebrow--gold{color:var(--gold-light)}
+/* Títulos: DM Serif Display (serifa editorial, legível em tamanhos grandes) em verde da marca */
+.h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,3.2vw,44px);line-height:1.18;letter-spacing:-.012em;margin:0;color:var(--green)}
+.h2--light{color:#fff}
+/* DM Serif Display só tem peso 400: evita negrito sintético nos títulos */
+.h2,.hero h1,.brand__name,.about__badge b,.cmp__title,.qz__q,.qz__score,.qz__rtitle,.success h3{font-weight:400;font-variation-settings:normal}
+.hero h1{letter-spacing:-.01em;line-height:1.08}
+.h2{letter-spacing:-.005em;line-height:1.2}
+.lead{font-size:17px;line-height:1.8;color:rgba(5,5,5,.74);margin:0}
+
+/* Curva divisória entre seções */
+.curve{display:block;width:100%;height:clamp(36px,7vw,90px);position:relative;z-index:1}
+
+/* Placeholder de imagem (trocar por <img>) */
+.ph{background:var(--placeholder);display:flex;align-items:center;justify-content:center;text-align:center;color:#000;font-weight:700;font-size:15px;line-height:1.5;padding:16px}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph small{display:block;margin-top:8px;font-weight:500;font-size:12px;opacity:.7;font-family:var(--display);letter-spacing:.04em}
+.card__media .card__phtext{padding:0 22px;font-size:13.5px}
+.card__media .card__phtext small{font-size:11px}
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;font-family:var(--display);font-weight:700;color:#fff;text-decoration:none;border:0;cursor:pointer;border-radius:999px;background:linear-gradient(135deg,#1e6b42 0%,#3c9a68 55%,#5fb98a 100%);transition:all .3s var(--ease);-webkit-tap-highlight-color:transparent;touch-action:manipulation;text-align:center}
+.btn .shine{position:absolute;inset:2px 2px 50% 2px;border-radius:999px 999px 40% 40%;background:linear-gradient(180deg,rgba(255,255,255,.32),rgba(255,255,255,0));pointer-events:none}
+.btn--sm{font-size:13px;padding:14px 24px;min-height:48px;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 -2px 0 rgba(0,0,0,.18),0 8px 20px rgba(60,154,104,.35)}
+.btn--sm:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),inset 0 -2px 0 rgba(0,0,0,.18),0 0 0 4px rgba(223,186,129,.35),0 12px 28px rgba(60,154,104,.45)}
+.btn--lg{font-size:16px;padding:22px 44px;min-height:60px;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 -3px 0 rgba(0,0,0,.18),0 10px 24px rgba(60,154,104,.35),0 26px 56px -12px rgba(30,107,66,.5)}
+.btn--lg:hover{transform:translateY(-3px) scale(1.02);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),inset 0 -3px 0 rgba(0,0,0,.18),0 0 0 5px rgba(223,186,129,.35),0 16px 34px rgba(60,154,104,.45),0 34px 70px -12px rgba(30,107,66,.55)}
+.btn--xl{font-size:17px;padding:24px 52px;min-height:64px;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 -3px 0 rgba(0,0,0,.18),0 0 0 6px rgba(223,186,129,.18),0 14px 30px rgba(60,154,104,.4),0 30px 70px -12px rgba(95,185,138,.5)}
+.btn--xl:hover{transform:translateY(-3px) scale(1.03);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),inset 0 -3px 0 rgba(0,0,0,.18),0 0 0 8px rgba(223,186,129,.3),0 20px 44px rgba(60,154,104,.5),0 40px 90px -12px rgba(95,185,138,.6)}
+.btn:active{transform:translateY(1px) scale(.98);box-shadow:inset 0 2px 4px rgba(0,0,0,.25),0 6px 14px rgba(60,154,104,.3)}
+.btn--block{width:100%}
+.btn--ghost{background:transparent;color:var(--green);border:1.5px solid rgba(45,90,55,.25);box-shadow:none;font-size:14px;padding:14px 26px;min-height:48px}
+.btn--ghost:hover{background:rgba(45,90,55,.06);border-color:var(--green);transform:translateY(-2px);box-shadow:none}
+@media (max-width:480px){
+  .btn--lg,.btn--xl{width:100%;padding-left:24px;padding-right:24px;font-size:15px}
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.header{position:sticky;top:0;z-index:50;background:rgba(247,245,244,.55);backdrop-filter:blur(22px) saturate(170%);-webkit-backdrop-filter:blur(22px) saturate(170%);border-bottom:1px solid rgba(255,255,255,.65);box-shadow:0 1px 0 rgba(45,90,55,.06),0 16px 44px -16px rgba(5,5,5,.14)}
+.header__in{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:84px;padding-top:18px;padding-bottom:18px}
+.brand{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.brand__name{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--green);white-space:nowrap;letter-spacing:-.01em}
+.cta-short{display:none}
+.brand__role{font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);margin-top:6px}
+.nav{display:flex;gap:32px}
+.nav a{font-family:var(--display);font-weight:600;font-size:13px;color:var(--ink);text-decoration:none;opacity:.75;transition:all .3s}
+.nav a:hover{opacity:1;color:var(--green)}
+.header__right{display:flex;align-items:center;gap:12px}
+.menu-btn{display:none;width:48px;height:48px;border-radius:50%;border:1px solid rgba(45,90,55,.15);background:rgba(255,255,255,.7);cursor:pointer;place-items:center;color:var(--green);-webkit-tap-highlight-color:transparent}
+.menu-btn svg{width:22px;height:22px}
+.menu-btn .ic-close{display:none}
+.header.is-open .menu-btn .ic-open{display:none}
+.header.is-open .menu-btn .ic-close{display:block}
+@media (max-width:860px){
+  .nav{display:none}
+  .menu-btn{display:grid}
+  .header.is-open .nav{display:flex;flex-direction:column;gap:0;position:absolute;left:0;right:0;top:100%;background:rgba(247,245,244,.96);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid rgba(45,90,55,.08);padding:8px var(--gutter) 16px;box-shadow:0 24px 44px -16px rgba(5,5,5,.2)}
+  .header.is-open .nav a{padding:14px 0;border-bottom:1px solid rgba(45,90,55,.08);font-size:15px;opacity:1}
+  .header.is-open .nav a:last-child{border-bottom:0}
+}
+@media (max-width:520px){
+  .header__in{min-height:72px;padding-top:12px;padding-bottom:12px;gap:12px}
+  .header__right{gap:8px}
+  .brand__name{font-size:19px}
+  .header .btn--sm{padding:12px 16px;min-height:44px;font-size:12px;white-space:nowrap}
+  .cta-full{display:none}
+  .cta-short{display:inline}
+  .menu-btn{width:44px;height:44px}
+  .eyebrow{font-size:11px;letter-spacing:.16em}
+}
+
+/* =========================================================
+   FOLHAS FLUTUANTES (símbolo reutilizado via <use>)
+   ========================================================= */
+.leaf{position:absolute;pointer-events:none;animation:kfFloat 9s ease-in-out infinite alternate;--leaf-fill:#6b8e73;--leaf-stroke:#2d5a37;z-index:0}
+.leaf--light{--leaf-fill:#ffffff;--leaf-stroke:#ffffff}
+.leaf--gold{--leaf-fill:#dfba81;--leaf-stroke:#c59b5f}
+.leaf--terra{--leaf-fill:#d99a89;--leaf-stroke:#c47c6a}
+.leaf-sym .lf{fill:var(--leaf-fill)}
+.leaf-sym .lv{stroke:var(--leaf-stroke);stroke-width:2;fill:none}
+@keyframes kfFloat{from{transform:translateY(-14px) rotate(-8deg)}to{transform:translateY(14px) rotate(10deg)}}
+@keyframes kfSpin{to{transform:rotate(360deg)}}
+@keyframes kfSpinRev{to{transform:rotate(-360deg)}}
+@media (max-width:860px){.leaf--desk{display:none}}
+@media (prefers-reduced-motion:reduce){
+  .leaf,.orbit__ring,.orbit__dot{animation:none!important}
+  html{scroll-behavior:auto}
+}
+
+/* =========================================================
+   S1 HERO
+   ========================================================= */
+.hero{background:radial-gradient(900px 600px at 85% 20%,rgba(107,142,115,.16),transparent 60%),radial-gradient(700px 500px at 5% 90%,rgba(196,124,106,.10),transparent 60%),var(--bg)}
+.hero__in{position:relative;padding-top:clamp(64px,9vw,120px);padding-bottom:clamp(64px,8vw,110px)}
+.hero__grid{position:relative;display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center;z-index:1}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,4.6vw,64px);line-height:1.06;letter-spacing:-.018em;margin:0 0 28px;color:var(--green)}
+.hero__sub{font-size:18px;line-height:1.75;color:rgba(5,5,5,.72);margin:0 0 40px;max-width:520px;text-wrap:pretty}
+.hero__eyebrow{margin-bottom:24px}
+.hero__micro{font-family:var(--display);font-weight:600;font-size:12px;letter-spacing:.04em;color:var(--green);margin:16px 0 0;opacity:.85}
+/* Prova social em pílula */
+.hero__proof{display:inline-flex;align-items:center;gap:14px;margin:18px 0 0;padding:8px 18px 8px 8px;border-radius:999px;background:linear-gradient(135deg,rgba(255,255,255,.75),rgba(255,255,255,.45));backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);border:1px solid rgba(255,255,255,.9);box-shadow:inset 0 1px 0 #fff,0 2px 4px rgba(45,90,55,.04),0 14px 30px -14px rgba(45,90,55,.35)}
+.avatars{display:inline-flex;align-items:center;flex:none}
+.avatars__a{width:34px;height:34px;border-radius:50%;border:2.5px solid #fff;background:radial-gradient(circle at 35% 30%,var(--a),var(--b) 75%);box-shadow:0 4px 10px -4px rgba(5,5,5,.3);display:grid;place-items:center}
+.avatars__a+.avatars__a{margin-left:-10px}
+.avatars__a--n{background:linear-gradient(135deg,#3c9a68,#2d5a37);color:#fff;font-family:var(--display);font-weight:700;font-size:10px;letter-spacing:.02em}
+.hero__proof-txt{display:flex;flex-direction:column;gap:2px;font-size:13px;line-height:1.35;color:rgba(5,5,5,.62)}
+.hero__proof-txt strong{color:var(--green);font-weight:700}
+.stars{font-size:11px;letter-spacing:.12em;color:var(--gold);line-height:1;text-shadow:0 0 6px rgba(223,186,129,.6)}
+.hero__micro-sep{display:inline}
+.hero__img{border-radius:36px 36px 36px 140px;aspect-ratio:600/700;overflow:hidden;box-shadow:0 6px 12px rgba(5,5,5,.05),0 30px 60px rgba(5,5,5,.1),0 60px 100px -40px rgba(45,90,55,.3)}
+@media (max-width:860px){
+  .hero__grid{grid-template-columns:1fr;gap:44px}
+  .hero__img{order:-1;max-width:420px;margin:0 auto;width:100%;border-radius:32px 32px 32px 110px}
+  .hero h1{font-size:clamp(34px,8.5vw,48px)}
+  .hero__sub{font-size:17px}
+}
+@media (max-width:480px){
+  .hero__in{padding-top:40px;padding-bottom:64px}
+  .hero__img{aspect-ratio:4/4.6;border-radius:28px 28px 28px 90px}
+  .hero__sub{font-size:16px;margin-bottom:32px}
+}
+
+/* =========================================================
+   FAIXA (marquee contínuo)
+   ========================================================= */
+.marquee{position:relative;background:linear-gradient(90deg,#c59b5f 0%,#dfba81 50%,#c59b5f 100%);color:var(--green-deep);overflow:hidden;padding:22px 0;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),inset 0 -1px 0 rgba(0,0,0,.08),0 10px 30px -14px rgba(197,155,95,.5);z-index:2}
+.marquee::before,.marquee::after{content:"";position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none}
+.marquee::before{left:0;background:linear-gradient(90deg,#c59b5f,transparent)}
+.marquee::after{right:0;background:linear-gradient(270deg,#c59b5f,transparent)}
+.marquee__track{display:flex;width:max-content;animation:kfMarquee 32s linear infinite;will-change:transform}
+
+.marquee__group{display:flex;align-items:center;flex:none}
+.marquee__group span{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.22em;text-transform:uppercase;white-space:nowrap;color:var(--green-deep);padding:0 34px}
+.marquee__sep{width:18px;height:18px;flex:none;--leaf-fill:#2d5a37;--leaf-stroke:#234a2c;opacity:.9;transform:rotate(-20deg)}
+.marquee__sep .lf{fill:var(--leaf-fill)}.marquee__sep .lv{stroke:var(--leaf-stroke)}
+@keyframes kfMarquee{to{transform:translateX(-50%)}}
+@media (max-width:860px){.marquee{padding:16px 0}.marquee__group span{font-size:13px;letter-spacing:.18em;padding:0 22px}.marquee::before,.marquee::after{width:60px}.marquee__track{animation-duration:24s}}
+@media (prefers-reduced-motion:reduce){.marquee__track{animation:none}}
+
+/* =========================================================
+   S2 DORES
+   ========================================================= */
+.pains{background:var(--green);color:#fff}
+.pains__in{position:relative;z-index:1;padding-top:clamp(64px,8vw,110px);padding-bottom:clamp(80px,10vw,140px)}
+.pains .h2{text-align:center;margin:0 auto 60px;max-width:640px}
+.pains .eyebrow{text-align:center}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.card{border-radius:30px;background:#fff;color:var(--ink);box-shadow:0 2px 4px rgba(0,0,0,.08),0 24px 48px -12px rgba(0,0,0,.35);overflow:hidden;transition:all .35s var(--ease);display:flex;flex-direction:column}
+.card:hover{transform:translateY(-8px);box-shadow:0 4px 8px rgba(0,0,0,.1),0 40px 70px -16px rgba(0,0,0,.45)}
+/* Área de imagem no topo do card (800x500, proporção 16:10) */
+.card__media{position:relative;aspect-ratio:16/10;overflow:hidden;background:radial-gradient(120px 60px at 30% 20%,rgba(255,255,255,.55),transparent),linear-gradient(180deg,#e3ebe4,#c6d6ca);display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--green);font-weight:700;text-align:center;padding:0}
+.card__media.ph{background:var(--placeholder);color:#000}
+.card__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.card__media::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(35,74,44,0) 55%,rgba(35,74,44,.35));pointer-events:none}
+.card__phtext{position:relative;z-index:0;line-height:1.5}
+.card__num{position:absolute;left:16px;bottom:34px;z-index:3;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:14px;color:var(--green);background:rgba(255,255,255,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.9);box-shadow:0 8px 20px -6px rgba(5,5,5,.35)}
+.card__body{position:relative;z-index:4;margin-top:-22px;background:#fff;border-radius:26px 26px 0 0;padding:34px 34px 36px;box-shadow:0 -6px 16px -8px rgba(45,90,55,.25);flex:1}
+.card__body p{font-size:16px;line-height:1.75;color:rgba(5,5,5,.78);margin:0;text-align:center}
+.card__body strong{color:var(--ink)}
+.card__bar{height:5px;background:linear-gradient(90deg,var(--terra),var(--gold-light))}
+.pains__note{text-align:center;font-size:17px;line-height:1.7;color:rgba(255,255,255,.78);margin:48px auto 0;max-width:560px}
+.pains__note strong{color:var(--gold-light);font-weight:600}
+@media (max-width:960px){.cards3{gap:20px}.card__body{padding:28px 24px 30px}}
+@media (max-width:860px){
+  .pains .h2{margin-bottom:40px}
+  /* Scroll stacking só no mobile */
+  .cards3{display:flex;flex-direction:column;gap:16px;max-width:520px;margin:0 auto;padding-bottom:clamp(32px,8vh,80px)}
+  .card{--i:0;position:sticky;top:calc(88px + var(--i) * 12px);transform-origin:50% 0;will-change:transform;transition:box-shadow .35s var(--ease)}
+  .card:nth-child(2){--i:1}.card:nth-child(3){--i:2}
+  .card:hover{transform:none}
+  .card::after{content:"";position:absolute;inset:0;z-index:9;border-radius:inherit;background:rgba(35,74,44,var(--dim,0));pointer-events:none}
+}
+@media (max-width:860px) and (prefers-reduced-motion:reduce){.card{position:relative;top:auto;transform:none!important}.cards3{padding-bottom:0}}
+
+/* =========================================================
+   S2b COMPARATIVO
+   ========================================================= */
+.compare{background:var(--bg)}
+.compare__in{position:relative;z-index:1;padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(80px,10vw,140px)}
+.compare .eyebrow,.compare .h2{text-align:center}
+.compare .h2{margin:0 auto 18px;max-width:720px}
+.compare__desc{text-align:center;font-size:17px;line-height:1.7;color:rgba(5,5,5,.68);margin:0 auto 56px;max-width:600px}
+.compare__grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;max-width:1040px;margin:0 auto}
+.cmp{border-radius:32px;padding:clamp(28px,3.5vw,44px);display:flex;flex-direction:column;gap:6px}
+.cmp--old{background:#fff;border:1px solid rgba(5,5,5,.06);box-shadow:0 2px 4px rgba(5,5,5,.03),0 18px 40px -16px rgba(5,5,5,.14)}
+.cmp--new{background:linear-gradient(160deg,#2d5a37 0%,#234a2c 100%);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 4px 8px rgba(45,90,55,.12),0 40px 80px -24px rgba(45,90,55,.55);position:relative;overflow:hidden}
+.cmp--new::before{content:"";position:absolute;inset:auto -20% -30% auto;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(223,186,129,.22),transparent 65%);pointer-events:none}
+.cmp__head{display:flex;align-items:center;gap:14px;margin-bottom:18px;padding-bottom:20px;border-bottom:1px solid rgba(5,5,5,.08)}
+.cmp--new .cmp__head{border-bottom-color:rgba(255,255,255,.16)}
+.cmp__tag{font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:8px 14px;border-radius:999px}
+.cmp--old .cmp__tag{background:rgba(196,124,106,.12);color:var(--terra)}
+.cmp--new .cmp__tag{background:rgba(223,186,129,.18);color:var(--gold-light);border:1px solid rgba(223,186,129,.35)}
+.cmp__title{font-family:var(--serif);font-weight:600;font-size:24px;letter-spacing:-.01em;margin:0}
+.cmp--old .cmp__title{color:rgba(5,5,5,.6)}
+.cmp__row{display:grid;grid-template-columns:32px 1fr;gap:14px;padding:14px 0;border-bottom:1px dashed rgba(5,5,5,.08);align-items:start}
+.cmp--new .cmp__row{border-bottom-color:rgba(255,255,255,.12)}
+.cmp__row:last-child{border-bottom:0}
+.cmp__ic{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;flex:none;margin-top:1px}
+.cmp--old .cmp__ic{background:rgba(5,5,5,.05);color:rgba(5,5,5,.4)}
+.cmp--new .cmp__ic{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 6px 14px rgba(197,155,95,.35)}
+.cmp__lbl{display:block;font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 4px}
+.cmp--old .cmp__lbl{color:rgba(5,5,5,.42)}
+.cmp--new .cmp__lbl{color:var(--gold-light)}
+.cmp__txt{font-size:15.5px;line-height:1.6;margin:0}
+.cmp--old .cmp__txt{color:rgba(5,5,5,.62)}
+.cmp--new .cmp__txt{color:rgba(255,255,255,.9)}
+.compare__cta{text-align:center;margin-top:52px}
+/* ---- Card único com toggle Antes/Agora ---- */
+.cmpx{max-width:820px;margin:0 auto;border-radius:32px;padding:clamp(22px,3.5vw,40px);position:relative;overflow:hidden;background:#fff;border:1px solid rgba(5,5,5,.06);box-shadow:0 2px 4px rgba(5,5,5,.03),0 30px 60px -20px rgba(5,5,5,.18);transition:background .7s var(--ease),border-color .7s,box-shadow .7s}
+.cmpx::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;right:-160px;bottom:-200px;background:radial-gradient(circle,rgba(223,186,129,.22),transparent 65%);opacity:0;transition:opacity .7s;pointer-events:none}
+.cmpx.is-new{background:linear-gradient(160deg,#2d5a37 0%,#234a2c 100%);border-color:transparent;box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 4px 8px rgba(45,90,55,.12),0 44px 90px -24px rgba(45,90,55,.6)}
+.cmpx.is-new::before{opacity:1}
+.cmpx__toggle{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:5px;border-radius:999px;background:rgba(45,90,55,.08);border:1px solid rgba(45,90,55,.1);max-width:560px;margin:0 auto;transition:background .7s,border-color .7s;z-index:1}
+.cmpx.is-new .cmpx__toggle{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.18)}
+.cmpx__knob{position:absolute;top:5px;bottom:5px;left:5px;width:calc(50% - 7px);border-radius:999px;background:#fff;box-shadow:0 2px 4px rgba(5,5,5,.06),0 10px 24px -8px rgba(45,90,55,.35);transition:transform .55s var(--ease),background .7s}
+.cmpx.is-new .cmpx__knob{transform:translateX(calc(100% + 4px));background:linear-gradient(135deg,var(--gold-light),var(--gold))}
+.cmpx__tab{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;gap:10px;background:none;border:0;cursor:pointer;font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:14px 16px;min-height:50px;border-radius:999px;color:rgba(5,5,5,.5);transition:color .4s;-webkit-tap-highlight-color:transparent}
+.cmpx__tab i{font-style:normal;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:12px;background:rgba(5,5,5,.08);color:rgba(5,5,5,.5);transition:all .4s}
+.cmpx__tab.is-active{color:var(--terra)}
+.cmpx__tab.is-active i{background:rgba(196,124,106,.15);color:var(--terra)}
+.cmpx.is-new .cmpx__tab{color:rgba(255,255,255,.55)}
+.cmpx.is-new .cmpx__tab i{background:rgba(255,255,255,.12);color:rgba(255,255,255,.6)}
+.cmpx.is-new .cmpx__tab.is-active{color:var(--green-deep)}
+.cmpx.is-new .cmpx__tab.is-active i{background:rgba(35,74,44,.18);color:var(--green-deep)}
+.cmpx__hint{text-align:center;font-size:12px;color:rgba(5,5,5,.42);margin:12px 0 0;letter-spacing:.04em;transition:color .5s,opacity .5s}
+.cmpx.is-new .cmpx__hint{color:rgba(255,255,255,.5)}
+.cmpx.has-clicked .cmpx__hint{opacity:0}
+.cmpx__panels{display:grid;margin-top:26px;position:relative;z-index:1}
+.cmpx__panel{grid-area:1/1;transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.cmpx__panel--old{opacity:1;transform:none}
+.cmpx__panel--new{opacity:0;transform:translateY(14px);pointer-events:none}
+.cmpx.is-new .cmpx__panel--old{opacity:0;transform:translateY(-14px);pointer-events:none}
+.cmpx.is-new .cmpx__panel--new{opacity:1;transform:none;pointer-events:auto}
+.cmpx__title{font-family:var(--serif);font-weight:400;font-size:24px;letter-spacing:-.01em;margin:0 0 18px;text-align:center}
+.cmpx__panel--old .cmpx__title{color:rgba(5,5,5,.55)}
+.cmpx__panel--new .cmpx__title{color:#fff}
+.cmpx__list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 22px}
+.cmpx__list li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;padding:14px 16px;border-radius:18px;transition:background .3s}
+.cmpx__panel--old li{background:rgba(5,5,5,.03)}
+.cmpx__panel--new li{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08)}
+.cmpx__ic{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;flex:none}
+.cmpx__panel--old .cmpx__ic{background:rgba(5,5,5,.06);color:rgba(5,5,5,.4)}
+.cmpx__panel--new .cmpx__ic{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 6px 14px rgba(197,155,95,.35)}
+.cmpx__list b{display:block;font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.cmpx__panel--old b{color:rgba(5,5,5,.42)}
+.cmpx__panel--new b{color:var(--gold-light)}
+.cmpx__list p{font-size:14.5px;line-height:1.55;margin:0}
+.cmpx__panel--old p{color:rgba(5,5,5,.6)}
+.cmpx__panel--new p{color:rgba(255,255,255,.9)}
+@media (max-width:860px){
+  .compare__desc{margin-bottom:36px}
+  .compare__cta{margin-top:36px}
+  .cmpx{border-radius:26px}
+  .cmpx__list{grid-template-columns:1fr;gap:10px}
+  .cmpx__tab{font-size:11px;letter-spacing:.04em;padding:12px 8px;gap:8px}
+  .cmpx__title{font-size:21px}
+}
+@media (max-width:420px){.cmpx__tab i{display:none}}
+
+/* =========================================================
+   S3 SOBRE
+   ========================================================= */
+.about{background:#fff}
+.about__in{position:relative;z-index:1;padding-top:clamp(48px,7vw,96px);padding-bottom:clamp(80px,10vw,140px)}
+.about__grid{display:grid;grid-template-columns:minmax(0,420px) 1fr;gap:72px;align-items:center}
+.about__media{position:relative}
+.about__img{border-radius:220px 220px 36px 36px;aspect-ratio:550/650;overflow:hidden;box-shadow:0 6px 12px rgba(5,5,5,.05),0 30px 60px rgba(5,5,5,.1)}
+.about__badge{position:absolute;right:-12px;bottom:36px;background:rgba(255,255,255,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.9);border-radius:20px;padding:16px 22px;box-shadow:inset 0 1px 0 #fff,0 16px 36px rgba(45,90,55,.14)}
+.about__badge b{display:block;font-family:var(--serif);font-weight:600;font-size:30px;line-height:1;color:var(--green)}
+.about__badge span{display:block;font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(5,5,5,.6);margin-top:6px}
+.about .h2{line-height:1.18;margin-bottom:24px;font-size:clamp(28px,2.7vw,38px)}
+.about .lead{margin-bottom:36px}
+.checks{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+.checks li{display:flex;gap:14px;align-items:center;font-size:16px;line-height:1.5;background:var(--bg);border-radius:999px;padding:14px 22px 14px 14px;box-shadow:inset 0 1px 0 #fff,0 2px 4px rgba(45,90,55,.04),0 12px 28px -8px rgba(45,90,55,.14)}
+.checks i{flex:none;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-light));display:grid;place-items:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+@media (max-width:860px){
+  .about__grid{grid-template-columns:1fr;gap:44px}
+  .about__media{max-width:380px;margin:0 auto;width:100%}
+  .about__badge{right:0}
+}
+@media (max-width:480px){
+  .checks li{border-radius:22px;align-items:flex-start;font-size:15px}
+  .about__badge{padding:12px 16px;bottom:20px}
+  .about__badge b{font-size:24px}
+}
+
+/* =========================================================
+   S4 MÉTODO (timeline)
+   ========================================================= */
+.method{background:var(--sage-light)}
+.method__in{position:relative;z-index:1;padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(80px,10vw,140px)}
+.method .eyebrow,.method .h2{text-align:center}
+.method .h2{margin:0 auto 64px;max-width:680px}
+.timeline{position:relative;max-width:940px;margin:0 auto;display:grid;gap:14px;--spine:56px;--dot-y:38px}
+/* Trilho contínuo: fundo pontilhado + preenchimento que cresce com o scroll (JS) */
+.timeline__track{position:absolute;top:var(--dot-y);bottom:var(--dot-y);left:50%;width:3px;margin-left:-1.5px;border-radius:3px;background:repeating-linear-gradient(180deg,rgba(107,142,115,.55) 0 6px,transparent 6px 14px);z-index:0}
+.timeline__fill{position:absolute;left:0;top:0;width:100%;height:0;border-radius:3px;background:linear-gradient(180deg,var(--green-bright),var(--green) 60%,var(--gold-light));box-shadow:0 0 12px rgba(60,154,104,.45);transition:height .15s linear}
+.timeline__fill::after{content:"";position:absolute;left:50%;bottom:-6px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--gold-light);box-shadow:0 0 0 4px rgba(223,186,129,.3),0 0 16px rgba(223,186,129,.7)}
+.tl{position:relative;display:grid;grid-template-columns:1fr var(--spine) 1fr;gap:24px;align-items:start;z-index:1}
+.tl--left .tl__card{grid-column:1;text-align:right}
+.tl--right .tl__card{grid-column:3}
+.tl__spine{grid-column:2;grid-row:1;display:flex;justify-content:center;padding-top:calc(var(--dot-y) - 13px)}
+/* Pontos: apagados até o preenchimento chegar neles */
+.tl__dot{width:26px;height:26px;border-radius:50%;background:#fff;border:2px solid rgba(107,142,115,.45);display:grid;place-items:center;box-shadow:0 4px 10px rgba(45,90,55,.12);transition:all .45s var(--ease);flex:none}
+.tl__dot i{width:10px;height:10px;border-radius:50%;background:rgba(107,142,115,.45);display:grid;place-items:center;transition:all .45s var(--ease);color:#fff}
+.tl__dot i svg{width:12px;height:12px;opacity:0;transition:opacity .3s}
+.tl__dot.is-lit{border-color:transparent;background:linear-gradient(135deg,var(--green-bright),var(--green));box-shadow:0 0 0 6px rgba(60,154,104,.18),0 8px 18px rgba(45,90,55,.35);transform:scale(1.15)}
+.tl__dot.is-lit i{background:#fff}
+.tl__dot--end.is-lit{background:linear-gradient(135deg,var(--gold-light),var(--gold));box-shadow:0 0 0 6px rgba(223,186,129,.25),0 8px 18px rgba(197,155,95,.4)}
+.tl__dot--end i{width:16px;height:16px;background:transparent}
+.tl__dot--end.is-lit i{background:transparent}
+.tl__dot--end.is-lit i svg{opacity:1}
+/* Cards */
+.tl__card{position:relative;background:linear-gradient(180deg,#ffffff 0%,#f9f7f6 100%);border:1px solid rgba(255,255,255,.95);border-radius:28px;padding:30px 34px 32px;box-shadow:inset 0 1px 0 #fff,0 2px 4px rgba(45,90,55,.05),0 18px 40px -12px rgba(45,90,55,.2);transition:all .35s var(--ease);overflow:hidden}
+.tl__card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--green-bright),var(--green) 55%,var(--gold-light))}
+.tl__card::after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;right:-90px;top:-90px;background:radial-gradient(circle,rgba(107,142,115,.16),transparent 65%);pointer-events:none}
+.tl--left .tl__card::after{right:auto;left:-90px}
+.tl__card:hover{transform:translateY(-5px);box-shadow:inset 0 1px 0 #fff,0 4px 8px rgba(45,90,55,.06),0 30px 60px -14px rgba(45,90,55,.3)}
+.tl__head{display:flex;align-items:center;gap:14px;margin-bottom:16px;position:relative}
+.tl--left .tl__head{flex-direction:row-reverse}
+.tl__ic{width:50px;height:50px;border-radius:16px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--green-bright),var(--green));box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -2px 0 rgba(0,0,0,.12),0 10px 22px -6px rgba(45,90,55,.45);flex:none}
+.tl__ic svg{width:24px;height:24px}
+.tl__tag{font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);background:rgba(197,155,95,.12);border:1px solid rgba(197,155,95,.25);padding:7px 12px;border-radius:999px}
+.tl__card h3{font-family:var(--display);font-weight:700;font-size:19px;line-height:1.3;margin:0 0 10px;color:var(--green);position:relative}
+.tl__card p{font-size:15px;line-height:1.75;color:rgba(5,5,5,.7);margin:0;position:relative}
+.method__cta{text-align:center;margin-top:64px}
+@media (max-width:860px){
+  .timeline{--spine:40px;--dot-y:34px;gap:16px}
+  .timeline__track{left:calc(var(--spine) / 2)}
+  .tl{grid-template-columns:var(--spine) 1fr;gap:16px}
+  .tl__spine{grid-column:1;grid-row:1}
+  .tl--left .tl__card,.tl--right .tl__card{grid-column:2;grid-row:1;text-align:left}
+  .tl--left .tl__head{flex-direction:row}
+  .tl--left .tl__card::after{left:auto;right:-90px}
+  .tl__card{padding:24px 22px 26px;border-radius:22px}
+  .tl__ic{width:44px;height:44px;border-radius:14px}
+  .tl__ic svg{width:21px;height:21px}
+  .tl__card h3{font-size:17px}
+  .method .h2{margin-bottom:40px}
+  .method__cta{margin-top:44px}
+}
+
+/* =========================================================
+   S4b PILARES (órbita)
+   ========================================================= */
+.pillars{background:var(--bg)}
+.pillars__in{position:relative;z-index:1;padding-top:clamp(48px,7vw,96px);padding-bottom:clamp(80px,10vw,140px)}
+.pillars__grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;--stack-top:104px}
+.orbit-wrap{display:flex;justify-content:center;position:sticky;top:calc(var(--stack-top) + 8px)}
+.orbit{position:relative;width:min(460px,84vw);aspect-ratio:1;--r:calc(min(460px,84vw)/2)}
+.orbit__halo{position:absolute;inset:-12%;border-radius:50%;background:radial-gradient(circle,rgba(107,142,115,.22),rgba(223,186,129,.10) 45%,transparent 68%);pointer-events:none}
+.orbit__ring{position:absolute;inset:0;border-radius:50%;border:2px dashed rgba(107,142,115,.55);animation:kfSpin 48s linear infinite}
+.orbit__ring--outer{inset:-7%;border:1px solid rgba(107,142,115,.22);animation:kfSpinRev 90s linear infinite}
+.orbit__ring--outer::before{content:"";position:absolute;top:-4px;left:50%;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:var(--gold-light);box-shadow:0 0 0 4px rgba(223,186,129,.25)}
+.orbit__pos{position:absolute;top:50%;left:50%;width:56px;height:56px;margin:-28px 0 0 -28px}
+.orbit__dot{width:56px;height:56px;border-radius:50%;color:#fff;display:grid;place-items:center;box-shadow:0 0 0 3px #fff,0 0 0 4px rgba(45,90,55,.08),inset 0 1px 0 rgba(255,255,255,.35),inset 0 -2px 0 rgba(0,0,0,.15),0 14px 26px rgba(45,90,55,.28);animation:kfSpinRev 48s linear infinite;transition:transform .3s var(--ease)}
+.orbit__dot svg{width:24px;height:24px;filter:drop-shadow(0 1px 1px rgba(0,0,0,.15))}
+.orbit__dot:hover{transform:scale(1.12)}
+.orbit__pos:nth-child(1){transform:rotate(0deg) translateX(var(--r)) rotate(0deg)}
+.orbit__pos:nth-child(2){transform:rotate(72deg) translateX(var(--r)) rotate(-72deg)}
+.orbit__pos:nth-child(3){transform:rotate(144deg) translateX(var(--r)) rotate(-144deg)}
+.orbit__pos:nth-child(4){transform:rotate(216deg) translateX(var(--r)) rotate(-216deg)}
+.orbit__pos:nth-child(5){transform:rotate(288deg) translateX(var(--r)) rotate(-288deg)}
+.orbit__dot--green{background:linear-gradient(135deg,var(--green-bright),var(--green))}
+.orbit__dot--sage{background:linear-gradient(135deg,#8aa892,var(--sage))}
+.orbit__dot--gold{background:linear-gradient(135deg,var(--gold-light),var(--gold));box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -2px 0 rgba(0,0,0,.15),0 12px 24px rgba(197,155,95,.32)}
+.orbit__dot--terra{background:linear-gradient(135deg,#d99a89,var(--terra));box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -2px 0 rgba(0,0,0,.15),0 12px 24px rgba(196,124,106,.32)}
+.orbit__disc{position:absolute;inset:11%;border-radius:50%;background:conic-gradient(from 210deg,#2d5a37,#6b8e73 30%,#dfba81 50%,#6b8e73 70%,#2d5a37);box-shadow:inset 0 2px 0 rgba(255,255,255,.25),0 30px 70px rgba(45,90,55,.28),0 0 0 10px rgba(255,255,255,.55)}
+.orbit__disc::after{content:"";position:absolute;inset:6px;border-radius:50%;background:linear-gradient(145deg,#6b8e73,#2d5a37)}
+.orbit__media{position:absolute;inset:15%;border-radius:50%;overflow:hidden;font-size:14px;padding:24px;box-shadow:inset 0 0 0 4px rgba(255,255,255,.9),inset 0 10px 30px rgba(0,0,0,.18)}
+.orbit__phtext{position:relative;z-index:0}
+.orbit__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;background:transparent}
+.orbit__video:not([src]):not(:has(source)){display:none}
+.orbit__gloss{position:absolute;inset:0;border-radius:50%;z-index:2;pointer-events:none;background:radial-gradient(120% 80% at 30% 12%,rgba(255,255,255,.28),transparent 45%),linear-gradient(180deg,transparent 60%,rgba(35,74,44,.35))}
+.pillars .eyebrow{margin-bottom:20px}
+.pillars .h2{line-height:1.15;margin-bottom:40px}
+/* Scroll stacking (mesma base da LP da Dra. Tamira: cards sticky com o mesmo top),
+   corrigido com deslocamento de 12px por card, escala/sombra nos cards cobertos e top
+   calculado pela altura do header em cada breakpoint */
+.pcards{list-style:none;padding:0 0 clamp(48px,12vh,140px);margin:0;display:flex;flex-direction:column;gap:16px}
+.pcard{--c1:#3c9a68;--c2:#2d5a37;--glow:rgba(45,90,55,.28);--i:0;position:sticky;top:calc(var(--stack-top) + var(--i) * 12px);display:grid;grid-template-columns:56px 1fr;gap:18px;align-items:center;background:linear-gradient(180deg,#ffffff,#f9f7f6);border:1px solid rgba(255,255,255,.95);border-radius:22px;padding:18px 22px 18px 18px;box-shadow:inset 0 1px 0 #fff,0 2px 4px rgba(45,90,55,.04),0 14px 30px -12px rgba(45,90,55,.16);transition:box-shadow .35s var(--ease),border-color .35s var(--ease);overflow:hidden;transform-origin:50% 0;will-change:transform}
+.pcard:nth-child(1){--i:0}.pcard:nth-child(2){--i:1}.pcard:nth-child(3){--i:2}.pcard:nth-child(4){--i:3}.pcard:nth-child(5){--i:4}
+.pcard::before{content:"";position:absolute;left:0;top:14%;bottom:14%;width:3px;border-radius:0 3px 3px 0;background:linear-gradient(180deg,var(--c1),var(--c2));opacity:0;transition:opacity .35s}
+.pcard::after{content:"";position:absolute;inset:0;border-radius:inherit;background:rgba(45,90,55,var(--dim,0));pointer-events:none;transition:background .1s linear}
+.pcard:hover{box-shadow:inset 0 1px 0 #fff,0 4px 8px rgba(45,90,55,.05),0 26px 50px -14px rgba(45,90,55,.26);border-color:rgba(60,154,104,.25)}
+.pcard:hover::before{opacity:1}
+.pcard.is-covered{box-shadow:inset 0 1px 0 #fff,0 2px 4px rgba(45,90,55,.03),0 8px 18px -10px rgba(45,90,55,.12)}
+@media (prefers-reduced-motion:reduce){.pcard{position:relative;top:auto;transform:none!important}.orbit-wrap{position:static}.pcards{padding-bottom:0}}
+.pcard__ic{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--c1),var(--c2));box-shadow:inset 0 1px 0 rgba(255,255,255,.4),inset 0 -2px 0 rgba(0,0,0,.12),0 10px 22px -6px var(--glow);flex:none}
+.pcard__ic svg{width:26px;height:26px}
+.pcard__n{display:inline-block;font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.16em;color:var(--c2);margin-bottom:4px}
+.pcard h3{font-family:var(--display);font-weight:700;font-size:16px;line-height:1.3;margin:0 0 4px;color:var(--ink)}
+.pcard p{font-size:14.5px;line-height:1.6;color:rgba(5,5,5,.66);margin:0}
+.pcard--green{--c1:#3c9a68;--c2:#2d5a37;--glow:rgba(45,90,55,.32)}
+.pcard--sage{--c1:#8aa892;--c2:#6b8e73;--glow:rgba(107,142,115,.34)}
+.pcard--gold{--c1:#dfba81;--c2:#c59b5f;--glow:rgba(197,155,95,.36)}
+.pcard--terra{--c1:#d99a89;--c2:#c47c6a;--glow:rgba(196,124,106,.36)}
+@media (max-width:480px){
+  .pcard{grid-template-columns:48px 1fr;gap:14px;padding:16px;border-radius:18px}
+  .pcard__ic{width:48px;height:48px;border-radius:15px}
+  .pcard__ic svg{width:22px;height:22px}
+}
+@media (max-width:860px){
+  .pillars__grid{grid-template-columns:1fr;gap:56px}
+  .orbit{width:min(400px,78vw);--r:calc(min(400px,78vw)/2)}
+  .orbit__dot,.orbit__pos{width:46px;height:46px}
+  .orbit__pos{margin:-23px 0 0 -23px}
+  .orbit__dot svg{width:20px;height:20px}
+  .orbit__media{font-size:13px;padding:18px}
+  .pillars__grid{padding-top:24px;--stack-top:88px}
+  .orbit-wrap{position:static}
+  .pcards{padding-bottom:clamp(32px,8vh,80px)}
+}
+
+/* =========================================================
+   S5 PROVA SOCIAL
+   ========================================================= */
+.social{background:var(--rose)}
+.social__in{position:relative;z-index:1;padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(80px,10vw,140px);padding-right:0}
+.social__head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;padding-right:var(--gutter)}
+.social__head>div:first-child{max-width:560px}
+.social .h2{margin-bottom:14px}
+.social__desc{font-size:17px;line-height:1.7;color:rgba(5,5,5,.68);margin:0}
+.social__ctrl{display:flex;gap:10px}
+.arrow{width:52px;height:52px;border-radius:50%;font-size:18px;cursor:pointer;transition:all .3s ease;-webkit-tap-highlight-color:transparent;display:grid;place-items:center}
+.arrow--prev{border:1px solid rgba(255,255,255,.9);background:rgba(255,255,255,.7);backdrop-filter:blur(10px);color:var(--green);box-shadow:inset 0 1px 0 #fff,0 8px 20px -6px rgba(196,124,106,.35)}
+.arrow--prev:hover{background:var(--green);color:#fff;transform:translateY(-2px)}
+.arrow--next{border:0;background:linear-gradient(135deg,#1e6b42,#3c9a68);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 8px 20px rgba(60,154,104,.35)}
+.arrow--next:hover{transform:translateY(-2px);box-shadow:0 0 0 4px rgba(223,186,129,.35),0 12px 26px rgba(60,154,104,.45)}
+.arrow:active{transform:scale(.95)}
+.slider{display:flex;gap:24px;margin-top:48px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:8px var(--gutter) 24px 0;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.slider::-webkit-scrollbar{display:none}
+.slide{flex:none;width:min(350px,78vw);aspect-ratio:350/450;scroll-snap-align:start;border-radius:28px;overflow:hidden;box-shadow:0 4px 8px rgba(5,5,5,.04),0 18px 40px rgba(196,124,106,.16),0 40px 70px -30px rgba(5,5,5,.2)}
+@media (max-width:860px){.slider{margin-top:32px;gap:16px}}
+
+/* =========================================================
+   S5b QUIZ INTESTINAL
+   ========================================================= */
+.quiz{background:var(--sage-light)}
+.quiz__in{position:relative;z-index:1;padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(80px,10vw,140px)}
+.quiz__grid{display:grid;grid-template-columns:1fr 1.25fr;gap:64px;align-items:center;max-width:1100px;margin:0 auto}
+.quiz .h2{margin-bottom:18px}
+.quiz__desc{font-size:17px;line-height:1.75;color:rgba(5,5,5,.7);margin:0 0 26px}
+/* Pílulas glass (usadas no hero e no quiz) */
+.quiz__meta{display:flex;gap:12px;flex-wrap:wrap}
+.gpill,.quiz__meta span{position:relative;display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:600;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);padding:11px 18px 11px 14px;border-radius:999px;background:linear-gradient(135deg,rgba(255,255,255,.72),rgba(255,255,255,.38));backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);border:1px solid transparent;background-clip:padding-box;box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -1px 0 rgba(45,90,55,.06),0 10px 24px -12px rgba(45,90,55,.35);transition:transform .3s var(--ease),box-shadow .3s var(--ease);overflow:hidden}
+.gpill::before,.quiz__meta span::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(223,186,129,.95),rgba(255,255,255,.55) 45%,rgba(197,155,95,.7));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.gpill::after,.quiz__meta span::after{content:"";position:absolute;top:0;left:-60%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .7s var(--ease);pointer-events:none}
+.gpill:hover,.quiz__meta span:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 rgba(45,90,55,.06),0 16px 30px -12px rgba(45,90,55,.4),0 0 0 3px rgba(223,186,129,.18)}
+.gpill:hover::after,.quiz__meta span:hover::after{left:110%}
+.gpill__dot,.quiz__meta i{width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#f3dfa3,var(--gold) 70%);box-shadow:0 0 0 3px rgba(223,186,129,.22),0 0 10px rgba(223,186,129,.7);display:inline-block;flex:none}
+/* Bolinha verde "online" pulsando */
+.gpill__dot--live{background:radial-gradient(circle at 35% 35%,#7fd1a3,#3c9a68 70%);box-shadow:0 0 0 3px rgba(60,154,104,.18),0 0 10px rgba(60,154,104,.55);animation:kfLive 2.4s ease-out infinite}
+@keyframes kfLive{0%{box-shadow:0 0 0 3px rgba(60,154,104,.22),0 0 10px rgba(60,154,104,.55)}60%{box-shadow:0 0 0 9px rgba(60,154,104,0),0 0 10px rgba(60,154,104,.35)}100%{box-shadow:0 0 0 3px rgba(60,154,104,.22),0 0 10px rgba(60,154,104,.55)}}
+.hero__pill{margin:0 0 24px;display:flex}
+@media (max-width:480px){.quiz__meta{gap:8px}.gpill,.quiz__meta span{font-size:10.5px;letter-spacing:.1em;padding:10px 14px 10px 12px}}
+@media (prefers-reduced-motion:reduce){.gpill__dot--live{animation:none}}
+.qz{background:linear-gradient(180deg,#ffffff,#f9f7f6);border:1px solid rgba(255,255,255,.95);border-radius:32px;padding:clamp(26px,3.5vw,42px);box-shadow:inset 0 1px 0 #fff,0 2px 4px rgba(45,90,55,.05),0 30px 60px -16px rgba(45,90,55,.28);min-height:420px;display:flex;flex-direction:column}
+.qz__top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}
+.qz__step{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
+.qz__bar{flex:1;height:6px;border-radius:999px;background:rgba(45,90,55,.1);overflow:hidden}
+.qz__bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--green-bright),var(--green));transition:width .4s var(--ease)}
+.qz__q{font-family:var(--serif);font-weight:600;font-size:clamp(21px,2vw,26px);line-height:1.3;color:var(--green);margin:0 0 26px;letter-spacing:-.01em}
+.qz__opts{display:grid;gap:10px}
+.qz__opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;font-family:var(--sans);font-size:16px;color:var(--ink);background:var(--bg);border:1.5px solid rgba(45,90,55,.1);border-radius:16px;padding:16px 18px;min-height:56px;cursor:pointer;transition:all .25s var(--ease);-webkit-tap-highlight-color:transparent}
+.qz__opt i{flex:none;width:22px;height:22px;border-radius:50%;border:2px solid rgba(45,90,55,.25);display:grid;place-items:center;transition:all .25s}
+.qz__opt:hover{border-color:var(--green-bright);background:#fff;transform:translateX(4px)}
+.qz__opt:hover i{border-color:var(--green-bright)}
+.qz__opt.is-sel{border-color:var(--green);background:#fff;box-shadow:0 0 0 4px rgba(60,154,104,.15)}
+.qz__opt.is-sel i{background:var(--green);border-color:var(--green)}
+.qz__opt.is-sel i::after{content:"";width:8px;height:8px;border-radius:50%;background:#fff}
+.qz__nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:auto;padding-top:24px}
+.qz__back{background:none;border:0;font-family:var(--display);font-weight:600;font-size:13px;color:rgba(5,5,5,.5);cursor:pointer;padding:10px 4px;transition:color .2s}
+.qz__back:hover{color:var(--green)}
+.qz__back[disabled]{opacity:0;pointer-events:none}
+.qz__next{font-size:14px;padding:14px 26px;min-height:50px}
+.qz__next[disabled]{opacity:.45;pointer-events:none;transform:none}
+/* Resultado */
+.qz__result{display:none;flex:1;flex-direction:column;justify-content:center;text-align:center}
+.qz.is-done .qz__quiz{display:none}
+.qz.is-done .qz__result{display:flex}
+/* Medidor em anel */
+.qz__score{--ring:url(#qzGradOk);--glow:rgba(60,154,104,.45);position:relative;width:136px;height:136px;margin:0 auto 22px;border-radius:50%;background:radial-gradient(circle at 50% 40%,#ffffff,#f7f5f4 70%);box-shadow:inset 0 1px 0 #fff,0 2px 4px rgba(45,90,55,.04),0 20px 44px -14px rgba(45,90,55,.35)}
+.qz__ring{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+.qz__ring-bg{fill:none;stroke:rgba(45,90,55,.1);stroke-width:8}
+.qz__ring-fg{fill:none;stroke:var(--ring);stroke-width:8;stroke-linecap:round;stroke-dasharray:326.7;stroke-dashoffset:326.7;transition:stroke-dashoffset 1.3s var(--ease);filter:drop-shadow(0 0 6px var(--glow))}
+.qz__score-in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.qz__score-in b{font-family:var(--serif);font-weight:400;font-size:44px;color:var(--green);letter-spacing:-.02em}
+.qz__score-in small{font-family:var(--display);font-weight:700;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-top:6px}
+.qz__score--ok{--ring:url(#qzGradOk);--glow:rgba(60,154,104,.45)}
+.qz__score--warn{--ring:url(#qzGradWarn);--glow:rgba(197,155,95,.5)}
+.qz__score--alert{--ring:url(#qzGradAlert);--glow:rgba(196,124,106,.5)}
+.qz__score--warn .qz__score-in b{color:#a8813f}
+.qz__score--alert .qz__score-in b{color:#b8654f}
+.qz__rtitle{font-family:var(--serif);font-weight:600;font-size:clamp(24px,2.4vw,30px);line-height:1.2;color:var(--green);margin:0 0 12px;letter-spacing:-.01em}
+.qz__rtext{font-size:16px;line-height:1.75;color:rgba(5,5,5,.72);margin:0 auto 26px;max-width:460px}
+.qz__ractions{display:flex;flex-direction:column;align-items:center;gap:12px}
+.qz__restart{background:none;border:0;font-family:var(--display);font-weight:600;font-size:13px;color:rgba(5,5,5,.5);cursor:pointer;padding:8px;text-decoration:underline;text-underline-offset:3px}
+.qz__restart:hover{color:var(--green)}
+.qz__note{font-size:12px;color:rgba(5,5,5,.45);margin:16px 0 0;line-height:1.5}
+@media (max-width:960px){.quiz__grid{gap:40px}}
+@media (max-width:860px){
+  .quiz__grid{grid-template-columns:1fr;gap:32px}
+  .qz{min-height:0;border-radius:26px}
+  .qz__opt{font-size:15px;padding:14px 16px}
+  .qz__next{width:auto}
+}
+
+/* =========================================================
+   S6 FAQ
+   ========================================================= */
+.faq{background:#fff}
+.faq__in{position:relative;z-index:1;padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(80px,10vw,140px)}
+.faq__grid{display:grid;grid-template-columns:1fr 1.5fr;gap:64px;align-items:start}
+.faq__side{position:sticky;top:110px}
+.faq .h2{margin-bottom:18px}
+.faq__help{font-size:16px;line-height:1.7;color:rgba(5,5,5,.68);margin:0}
+.faq__help a{color:var(--green);font-weight:500;text-decoration:underline;text-underline-offset:3px}
+.faq__list{display:grid;gap:14px}
+.acc{background:linear-gradient(180deg,#ffffff,#f9f7f6);border:1px solid rgba(45,90,55,.08);border-radius:22px;box-shadow:inset 0 1px 0 #fff,0 2px 4px rgba(45,90,55,.03),0 14px 30px -12px rgba(45,90,55,.14);overflow:hidden}
+.acc__btn{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;background:none;border:0;padding:24px 26px;cursor:pointer;text-align:left;color:var(--ink);transition:all .3s ease;-webkit-tap-highlight-color:transparent;font-family:inherit}
+.acc__btn:hover{color:var(--green)}
+.acc__btn h3{font-family:var(--display);font-weight:600;font-size:17px;line-height:1.4;margin:0}
+.acc__icon{flex:none;width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-light));display:grid;place-items:center;font-size:20px;color:#fff;line-height:1;box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 6px 14px rgba(197,155,95,.3);transition:transform .3s ease}
+.acc__panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s var(--ease)}
+.acc__panel>div{overflow:hidden}
+.acc__panel p{font-size:16px;line-height:1.8;color:rgba(5,5,5,.72);margin:0;padding:0 26px 26px;max-width:600px;text-wrap:pretty}
+.acc.is-open .acc__panel{grid-template-rows:1fr}
+.acc.is-open .acc__icon{transform:rotate(45deg)}
+@media (max-width:860px){
+  .faq__grid{grid-template-columns:1fr;gap:36px}
+  .faq__side{position:static}
+  .acc__btn{padding:20px 20px}
+  .acc__btn h3{font-size:16px}
+  .acc__panel p{padding:0 20px 22px}
+}
+
+/* =========================================================
+   S6b FORMULÁRIO
+   ========================================================= */
+.book{background:radial-gradient(800px 500px at 20% 10%,rgba(107,142,115,.35),transparent 60%),linear-gradient(180deg,var(--green),var(--green-deep))}
+.book__in{position:relative;z-index:1;padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(80px,10vw,140px)}
+.book__head{text-align:center;max-width:640px;margin:0 auto 48px;color:#fff}
+.pill{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.25);padding:10px 20px;border-radius:999px}
+.book .h2{font-size:clamp(30px,3.4vw,46px);line-height:1.15;margin:22px 0 18px}
+.book__rule{width:56px;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-light));margin:0 auto 18px}
+.book__desc{font-size:16px;line-height:1.7;color:rgba(255,255,255,.78);margin:0}
+.form{max-width:760px;margin:0 auto;background:linear-gradient(180deg,#ffffff,#f9f7f6);border:1px solid rgba(255,255,255,.95);border-radius:32px;padding:clamp(24px,4vw,48px);box-shadow:inset 0 1px 0 #fff,0 2px 4px rgba(0,0,0,.08),0 30px 60px -12px rgba(0,0,0,.4)}
+.form__grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.field{display:grid;gap:8px}
+.field--full{margin-top:20px}
+.field span{font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.field input,.field select,.field textarea{font-family:var(--sans);font-size:16px;padding:16px 20px;min-height:54px;border-radius:16px;border:1px solid rgba(5,5,5,.12);background:var(--bg);color:var(--ink);outline:none;box-shadow:inset 0 2px 4px rgba(5,5,5,.04);transition:all .3s ease;width:100%}
+.field select{appearance:auto}
+.field textarea{resize:vertical;min-height:120px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green-bright);background:#fff;box-shadow:0 0 0 4px rgba(60,154,104,.15)}
+.form .btn{margin-top:28px;padding:22px 32px;min-height:62px}
+.form__safe{display:flex;justify-content:center;align-items:center;gap:6px;font-size:12px;color:rgba(5,5,5,.5);margin:18px 0 0;text-align:center}
+.success{max-width:760px;margin:0 auto;background:linear-gradient(180deg,#ffffff,#f9f7f6);border-radius:32px;padding:56px 40px;text-align:center;box-shadow:0 30px 60px -12px rgba(0,0,0,.4)}
+.success__ic{width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,#1e6b42,#3c9a68);color:#fff;display:grid;place-items:center;margin:0 auto 20px;font-size:30px;box-shadow:0 12px 28px rgba(60,154,104,.35)}
+.success h3{font-family:var(--serif);font-weight:600;font-size:28px;margin:0 0 12px;color:var(--green)}
+.success p{font-size:16px;line-height:1.7;color:rgba(5,5,5,.68);margin:0}
+@media (max-width:860px){.form__grid{grid-template-columns:1fr;gap:16px}.field--full{margin-top:16px}.book__head{margin-bottom:32px}}
+@media (max-width:480px){.form{border-radius:24px}.success{padding:40px 24px}}
+
+/* =========================================================
+   S7 FOOTER CTA
+   ========================================================= */
+.footer{background:radial-gradient(900px 500px at 50% 0%,rgba(107,142,115,.22),transparent 60%),linear-gradient(180deg,#e7ede8 0%,#f7f5f4 100%);color:var(--ink)}
+.footer__in{position:relative;z-index:1;padding-top:clamp(48px,7vw,100px);padding-bottom:32px}
+.footer__cta{text-align:center}
+.footer .h2{font-size:clamp(32px,3.8vw,52px);line-height:1.15;margin:0 auto 18px;max-width:760px}
+.footer__sub{font-size:17px;line-height:1.7;color:rgba(5,5,5,.66);margin:0 auto 40px;max-width:520px}
+.footer em{font-style:italic;background:linear-gradient(90deg,var(--gold),#b8893f);-webkit-background-clip:text;background-clip:text;color:transparent}
+.footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-top:clamp(64px,8vw,100px);padding-top:clamp(36px,4vw,48px);border-top:1px solid rgba(45,90,55,.12)}
+.footer__col{display:flex;flex-direction:column;gap:10px;font-size:14.5px;color:rgba(5,5,5,.7)}
+.footer__col a{color:var(--green);text-decoration:none;font-weight:500;transition:color .25s}
+.footer__col a:hover{color:var(--terra)}
+.footer__brand .brand__name{font-size:26px}
+.footer__brand .brand__role{margin-top:2px}
+.footer__brand p{margin:12px 0 0;max-width:340px;line-height:1.7;font-size:14.5px;color:rgba(5,5,5,.66)}
+.footer__title{font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.social-links{display:flex;gap:10px;flex-wrap:wrap}
+.social-links a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid rgba(45,90,55,.12);color:var(--green);box-shadow:inset 0 1px 0 #fff,0 2px 4px rgba(45,90,55,.04),0 12px 24px -10px rgba(45,90,55,.25);transition:all .3s var(--ease)}
+.social-links a svg{width:20px;height:20px}
+.social-links a:hover{transform:translateY(-3px);background:linear-gradient(135deg,#1e6b42,#3c9a68);color:#fff;border-color:transparent;box-shadow:0 0 0 4px rgba(223,186,129,.3),0 14px 28px -8px rgba(60,154,104,.5)}
+.footer__bar{border-top:1px solid rgba(45,90,55,.12);margin-top:clamp(36px,4vw,48px);padding-top:22px;text-align:center;font-family:var(--display);font-weight:600;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(5,5,5,.5)}
+@media (max-width:860px){
+  .footer__grid{grid-template-columns:1fr;gap:32px;text-align:center}
+  .footer__col{align-items:center}
+  .footer__brand p{margin-left:auto;margin-right:auto}
+  .social-links{justify-content:center}
+}
+@media (max-width:480px){.footer__bar{font-size:11px;letter-spacing:.06em;line-height:1.7}}
+
+/* =========================================================
+   MOBILE: blocos de texto centralizados
+   ========================================================= */
+@media (max-width:860px){
+  /* Hero */
+  .hero__grid > div[data-reveal]{text-align:center}
+  .hero__pill{justify-content:center}
+  .hero__sub{margin-left:auto;margin-right:auto}
+  .hero__micro span{display:block}
+  .hero__micro .hero__micro-sep{display:none}
+  .hero__proof{justify-content:center;text-align:left;margin-left:auto;margin-right:auto}
+  /* Sobre */
+  .about__grid > div[data-reveal="right"]{text-align:center}
+  .checks li{text-align:left}
+  /* Pilares */
+  .pillars__grid > div > .eyebrow,.pillars__grid > div > .h2{text-align:center}
+  /* Depoimentos */
+  .social__head{justify-content:center;text-align:center}
+  .social__head > div:first-child{text-align:center}
+  /* Quiz */
+  .quiz__grid > div[data-reveal="left"]{text-align:center}
+  .quiz__meta{justify-content:center}
+  /* FAQ */
+  .faq__side{text-align:center}
+  /* Formulário */
+  .form__safe{text-align:center}
+}
+@media (max-width:480px){
+  .hero__micro{line-height:1.6}
+}
+
+/* =========================================================
+   POPUP FLUTUANTE (direita) e COOKIES (esquerda)
+   ========================================================= */
+.chat-pop{position:fixed;right:22px;bottom:22px;z-index:80;display:flex;align-items:center;max-width:calc(100vw - 32px);transform:translateX(calc(100% + 40px));opacity:0;transition:transform .8s var(--ease),opacity .6s ease;pointer-events:none}
+.chat-pop.is-on{transform:none;opacity:1;pointer-events:auto}
+.chat-pop__avatar{position:relative;z-index:2;width:66px;height:66px;border-radius:50%;flex:none;display:grid;place-items:center;background:linear-gradient(135deg,#e7ede8,#c6d6ca);border:3px solid var(--gold-light);box-shadow:0 10px 24px rgba(45,90,55,.28),0 0 0 4px rgba(255,255,255,.85);overflow:visible;text-decoration:none}
+.chat-pop__initials{font-family:var(--serif);font-size:22px;color:var(--green)}
+.chat-pop__avatar img{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;object-fit:cover}
+.chat-pop__dot{position:absolute;right:-1px;bottom:1px;width:16px;height:16px;border-radius:50%;background:#3c9a68;border:3px solid #fff;box-shadow:0 0 0 0 rgba(60,154,104,.5);animation:kfPulse 2.2s ease-out infinite}
+@keyframes kfPulse{0%{box-shadow:0 0 0 0 rgba(60,154,104,.55)}70%{box-shadow:0 0 0 10px rgba(60,154,104,0)}100%{box-shadow:0 0 0 0 rgba(60,154,104,0)}}
+.chat-pop__bubble{position:relative;margin-left:-16px;display:flex;flex-direction:column;gap:4px;background:#fff;border-radius:22px;padding:14px 44px 14px 30px;box-shadow:0 2px 4px rgba(5,5,5,.05),0 22px 48px -12px rgba(45,90,55,.35);text-decoration:none;color:var(--ink);border:1px solid rgba(45,90,55,.08);transition:transform .3s var(--ease),box-shadow .3s}
+.chat-pop__bubble:hover{transform:translateY(-2px);box-shadow:0 4px 8px rgba(5,5,5,.05),0 28px 56px -12px rgba(45,90,55,.42);color:var(--ink)}
+.chat-pop__bubble::before{content:"";position:absolute;left:-7px;top:50%;width:14px;height:14px;background:#fff;border-left:1px solid rgba(45,90,55,.08);border-bottom:1px solid rgba(45,90,55,.08);transform:translateY(-50%) rotate(45deg);border-radius:0 0 0 3px}
+.chat-pop__label{font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.chat-pop__text{font-size:16px;font-weight:500;color:var(--ink);line-height:1.35}
+.chat-pop__close{position:absolute;right:10px;top:8px;z-index:3;width:28px;height:28px;border-radius:50%;border:0;background:transparent;color:rgba(5,5,5,.45);font-size:20px;line-height:1;cursor:pointer;display:grid;place-items:center;transition:all .25s}
+.chat-pop__close:hover{background:rgba(45,90,55,.08);color:var(--green)}
+@media (max-width:600px){
+  .chat-pop{right:12px;bottom:14px;max-width:calc(100vw - 24px)}
+  .chat-pop__avatar{width:54px;height:54px}
+  .chat-pop__initials{font-size:18px}
+  .chat-pop__bubble{padding:12px 40px 12px 26px;border-radius:18px}
+  .chat-pop__label{font-size:10px;letter-spacing:.16em}
+  .chat-pop__text{font-size:14px}
+}
+
+.cookie{position:fixed;left:22px;bottom:22px;z-index:81;max-width:400px;display:flex;gap:16px;align-items:flex-start;background:rgba(255,255,255,.9);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border:1px solid rgba(255,255,255,.95);border-radius:22px;padding:20px 22px;box-shadow:inset 0 1px 0 #fff,0 2px 4px rgba(5,5,5,.05),0 30px 60px -16px rgba(45,90,55,.35);transform:translateX(calc(-100% - 40px));opacity:0;transition:transform 1.6s cubic-bezier(.16,1,.3,1),opacity 1.2s ease;pointer-events:none}
+.cookie.is-on{transform:none;opacity:1;pointer-events:auto}
+.cookie.is-off{transform:translateY(24px);opacity:0;transition:transform .45s var(--ease),opacity .4s ease}
+.cookie__ic{flex:none;width:46px;height:46px;border-radius:15px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--gold-light),var(--gold));box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 10px 22px -6px rgba(197,155,95,.5)}
+.cookie__ic svg{width:24px;height:24px}
+.cookie__title{display:block;font-family:var(--display);font-weight:700;font-size:14px;color:var(--green);margin-bottom:6px;letter-spacing:.02em}
+.cookie__text{font-size:13.5px;line-height:1.6;color:rgba(5,5,5,.68);margin:0 0 14px}
+.cookie__actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.cookie__actions .btn--sm{padding:12px 20px;min-height:44px;font-size:12px}
+.cookie__essential{background:none;border:0;font-family:var(--display);font-weight:600;font-size:12px;color:rgba(5,5,5,.55);cursor:pointer;padding:8px 2px;text-decoration:underline;text-underline-offset:3px;transition:color .25s}
+.cookie__essential:hover{color:var(--green)}
+@media (max-width:600px){
+  .cookie{left:12px;right:12px;bottom:12px;max-width:none;padding:16px;gap:12px;border-radius:18px}
+  .cookie__ic{width:40px;height:40px;border-radius:12px}
+  .cookie__text{font-size:13px;margin-bottom:12px}
+}
+@media (prefers-reduced-motion:reduce){.chat-pop,.cookie{transition:opacity .3s}.chat-pop__dot{animation:none}}
+
+/* =========================================================
+   REVEAL NO SCROLL (mesma receita da Oncreate: opacidade + 30px + blur 6px, 0.8s,
+   ativa ao cruzar 80% da tela e reanima ao voltar). Em @layer para não brigar
+   com as transições/hover próprias de cada componente.
+   ========================================================= */
+@layer reveal{
+  [data-reveal]{opacity:0;filter:blur(6px);transition:opacity .8s var(--ease),transform .8s var(--ease),filter .8s var(--ease);will-change:opacity,transform,filter;transition-delay:0s}
+  [data-reveal="up"]{transform:translateY(30px)}
+  [data-reveal="down"]{transform:translateY(-30px)}
+  [data-reveal="left"]{transform:translateX(-30px)}
+  [data-reveal="right"]{transform:translateX(30px)}
+  [data-reveal="scale"]{transform:scale(.94)}
+  [data-reveal].is-in{opacity:1;transform:none;filter:blur(0);transition-delay:var(--rd,0s)}
+  @media (max-width:860px){
+    [data-reveal]{filter:blur(4px);transition-duration:.7s}
+    [data-reveal="up"]{transform:translateY(22px)}
+    [data-reveal="down"]{transform:translateY(-22px)}
+    [data-reveal="left"]{transform:translateX(-22px)}
+    [data-reveal="right"]{transform:translateX(22px)}
+  }
+  @media (prefers-reduced-motion:reduce){
+    [data-reveal]{opacity:1;transform:none;filter:none;transition:none}
+  }
+}
+</style>
+</head>
+<body>
+<!-- Símbolo da folha (reaproveitado em toda a página) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="leaf" viewBox="0 0 64 64" class="leaf-sym"><path class="lf" d="M8 56C8 30 30 8 58 8 58 36 36 58 8 56Z"/><path class="lv" d="M8 56 58 8"/></symbol></svg>
+
+<div class="wrap">
+
+<!-- ===================== HEADER ===================== -->
+<header class="header" id="header">
+  <div class="container header__in">
+    <a class="brand" href="#top" aria-label="Kamilla Fertonani, Nutricionista">
+      <span class="brand__name">Kamilla Fertonani</span>
+      <span class="brand__role">Nutricionista</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#metodo">Método</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#quiz">Teste</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <div class="header__right">
+      <a href="#agendar" class="btn btn--sm"><span class="cta-full">Agendar consulta</span><span class="cta-short">Agendar</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <svg class="ic-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== S1 HERO ===================== -->
+<section class="hero" id="top">
+  <div class="container hero__in">
+    <svg class="leaf" width="72" height="72" style="top:6%;right:-10px;opacity:.55;filter:blur(1px);animation-delay:-3s" aria-hidden="true"><use href="#leaf"/></svg>
+    <svg class="leaf" width="44" height="44" style="bottom:14%;left:46%;opacity:.4;filter:blur(2px);animation-duration:12s" aria-hidden="true"><use href="#leaf"/></svg>
+    <svg class="leaf" width="96" height="96" style="top:38%;left:-30px;opacity:.28;filter:blur(3px);animation-duration:14s;animation-delay:-6s" aria-hidden="true"><use href="#leaf"/></svg>
+
+    <div class="hero__grid">
+      <div data-reveal="up">
+        <p class="hero__pill"><span class="gpill"><i class="gpill__dot gpill__dot--live" aria-hidden="true"></i>Emagrecimento e saúde intestinal</span></p>
+        <h1>O fim do efeito sanfona começa pelo seu intestino.</h1>
+        <p class="hero__sub">Se você já emagreceu e voltou a engordar, ou faz tudo certo e o peso não desce, o problema não é a sua força de vontade. Com o intestino regulado e um plano 100% feito para a sua rotina, o seu corpo volta a responder. Sem passar fome e sem cortar o que você gosta.</p>
+        <a href="#agendar" class="btn btn--lg"><span class="shine"></span>Agendar Minha Consulta Online <span aria-hidden="true">→</span></a>
+        <p class="hero__micro"><span>Atendimento online para todo o Brasil</span><span class="hero__micro-sep"> • </span><span>Retorno em até 24h</span></p>
+        <div class="hero__proof">
+          <span class="avatars" aria-hidden="true">
+            <span class="avatars__a" style="--a:#8aa892;--b:#6b8e73"></span>
+            <span class="avatars__a" style="--a:#d99a89;--b:#c47c6a"></span>
+            <span class="avatars__a" style="--a:#dfba81;--b:#c59b5f"></span>
+            <span class="avatars__a avatars__a--n">+1k</span>
+          </span>
+          <span class="hero__proof-txt">
+            <span class="stars" aria-label="5 estrelas">★★★★★</span>
+            <span><strong>+1.000 mulheres</strong> já transformaram o corpo e a saúde</span>
+          </span>
+        </div>
+      </div>
+      <div class="hero__img ph" data-reveal="scale" style="--rd:.15s">Foto da Kamilla em pé, sorrindo, jaleco ou roupa clara, fundo neutro<br><small>hero-kamilla.jpg · 600 x 700px</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAIXA (marquee) ===================== -->
+<div class="marquee" aria-label="Intestino regulado, corpo que emagrece, sem passar fome, plano 100% personalizado, mais de 1.000 pacientes transformadas">
+  <div class="marquee__track" aria-hidden="true">
+    <div class="marquee__group">
+      <span>Intestino regulado</span><svg class="marquee__sep"><use href="#leaf"/></svg>
+      <span>Corpo que emagrece</span><svg class="marquee__sep"><use href="#leaf"/></svg>
+      <span>Sem passar fome</span><svg class="marquee__sep"><use href="#leaf"/></svg>
+      <span>Plano 100% personalizado</span><svg class="marquee__sep"><use href="#leaf"/></svg>
+      <span>+1.000 pacientes transformadas</span><svg class="marquee__sep"><use href="#leaf"/></svg>
+    </div>
+    <div class="marquee__group">
+      <span>Intestino regulado</span><svg class="marquee__sep"><use href="#leaf"/></svg>
+      <span>Corpo que emagrece</span><svg class="marquee__sep"><use href="#leaf"/></svg>
+      <span>Sem passar fome</span><svg class="marquee__sep"><use href="#leaf"/></svg>
+      <span>Plano 100% personalizado</span><svg class="marquee__sep"><use href="#leaf"/></svg>
+      <span>+1.000 pacientes transformadas</span><svg class="marquee__sep"><use href="#leaf"/></svg>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== S2 DORES ===================== -->
+<section class="pains">
+  <svg class="leaf leaf--light leaf--desk" width="120" height="120" style="top:14%;left:-40px;opacity:.07;filter:blur(1px);animation-duration:13s" aria-hidden="true"><use href="#leaf"/></svg>
+  <svg class="leaf leaf--light" width="56" height="56" style="bottom:10%;right:4%;opacity:.1;filter:blur(1.5px);animation-duration:11s;animation-delay:-5s" aria-hidden="true"><use href="#leaf"/></svg>
+  <div class="container pains__in">
+    <p class="eyebrow eyebrow--gold" data-reveal="up">Reconhece isso?</p>
+    <h2 class="h2 h2--light" data-reveal="up" style="--rd:.08s">Se você se identifica com pelo menos uma, esta página é para você.</h2>
+    <div class="cards3" id="cards3" data-reveal-children="up" data-reveal-step="0.12">
+      <article class="card">
+        <div class="card__media ph"><span class="card__phtext">Mulher no sofá com as mãos na barriga estufada, cansada<br><small>dor-01.jpg · 800 x 500px</small></span><img src="assets/dor-01.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="card__num">01</span></div>
+        <div class="card__body"><p>Faz tudo certo e o <strong>peso não desce</strong>. Vive <strong>cansada</strong>, com a barriga <strong>estufada</strong> e o intestino preso há dias.</p></div>
+        <div class="card__bar"></div>
+      </article>
+      <article class="card">
+        <div class="card__media ph"><span class="card__phtext">Mulher frustrada olhando a balança, calça apertada<br><small>dor-02.jpg · 800 x 500px</small></span><img src="assets/dor-02.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="card__num">02</span></div>
+        <div class="card__body"><p>Já emagreceu com <strong>dieta restritiva</strong> ou <strong>canetinha</strong> e viu <strong>tudo voltar</strong>, às vezes com juros.</p></div>
+        <div class="card__bar"></div>
+      </article>
+      <article class="card">
+        <div class="card__media ph"><span class="card__phtext">Mulher na cozinha, com pressa, encarando um prato triste de dieta<br><small>dor-03.jpg · 800 x 500px</small></span><img src="assets/dor-03.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="card__num">03</span></div>
+        <div class="card__body"><p>Acredita que comer bem é <strong>caro, sem graça</strong> ou impossível na sua <strong>rotina</strong>, então nem começa.</p></div>
+        <div class="card__bar"></div>
+      </article>
+    </div>
+    <p class="pains__note" data-reveal="up">Nada disso é falta de força de vontade. <strong>É um intestino que ainda não foi tratado.</strong></p>
+  </div>
+</section>
+
+<!-- ===================== S2b COMPARATIVO ===================== -->
+<section class="compare" id="comparativo">
+  <svg class="curve" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0C360 90 1080 90 1440 0Z" fill="#2d5a37"/></svg>
+  <svg class="leaf leaf--desk" width="80" height="80" style="top:22%;right:3%;opacity:.3;filter:blur(1.5px);animation-duration:12s;animation-delay:-2s" aria-hidden="true"><use href="#leaf"/></svg>
+  <svg class="leaf" width="52" height="52" style="bottom:12%;left:5%;opacity:.25;filter:blur(2px);animation-duration:10s;animation-delay:-7s" aria-hidden="true"><use href="#leaf"/></svg>
+  <div class="container compare__in">
+    <p class="eyebrow" data-reveal="up">Por que desta vez vai ser diferente</p>
+    <h2 class="h2" data-reveal="up" style="--rd:.08s">Mais uma dieta ou tratar a causa de uma vez?</h2>
+    <p class="compare__desc" data-reveal="up" style="--rd:.16s">Você já sabe o que acontece quando corta tudo e segura na força de vontade: funciona até a primeira festa. O caminho que dura é outro.</p>
+
+    <div class="cmpx" id="cmpx" data-reveal="scale">
+      <div class="cmpx__toggle" role="tablist" aria-label="Comparar abordagens">
+        <span class="cmpx__knob" aria-hidden="true"></span>
+        <button class="cmpx__tab is-active" role="tab" aria-selected="true" data-state="old" type="button"><i>✕</i>Antes: dieta da moda</button>
+        <button class="cmpx__tab" role="tab" aria-selected="false" data-state="new" type="button"><i>✓</i>Agora: Método Kamilla</button>
+      </div>
+      <p class="cmpx__hint" aria-hidden="true">Toque para ver a diferença</p>
+
+      <div class="cmpx__panels">
+        <div class="cmpx__panel cmpx__panel--old" role="tabpanel">
+          <h3 class="cmpx__title">O que você já tentou</h3>
+          <ul class="cmpx__list">
+            <li><span class="cmpx__ic">✕</span><div><b>Foco</b><p>Cortar calorias a qualquer custo, sem olhar por que o corpo não responde.</p></div></li>
+            <li><span class="cmpx__ic">✕</span><div><b>Cardápio</b><p>Lista genérica, igual para todo mundo, que ignora seu bolso e sua rotina.</p></div></li>
+            <li><span class="cmpx__ic">✕</span><div><b>Restrições</b><p>Corta tudo o que você gosta. Funciona até a primeira festa.</p></div></li>
+            <li><span class="cmpx__ic">✕</span><div><b>Sintomas</b><p>Estufamento, cansaço e intestino preso continuam. Só o número da balança importa.</p></div></li>
+            <li><span class="cmpx__ic">✕</span><div><b>Suporte</b><p>Você sozinha com uma folha de papel e a força de vontade.</p></div></li>
+            <li><span class="cmpx__ic">✕</span><div><b>Resultado</b><p>Emagrece rápido, engorda tudo de novo. O efeito sanfona de sempre.</p></div></li>
+          </ul>
+        </div>
+        <div class="cmpx__panel cmpx__panel--new" role="tabpanel">
+          <h3 class="cmpx__title">O caminho que funciona</h3>
+          <ul class="cmpx__list">
+            <li><span class="cmpx__ic">✓</span><div><b>Foco</b><p>Tratar a causa: um intestino regulado é um corpo que emagrece.</p></div></li>
+            <li><span class="cmpx__ic">✓</span><div><b>Cardápio</b><p>100% individualizado ao seu bolso, aos seus gostos e ao tempo que você tem.</p></div></li>
+            <li><span class="cmpx__ic">✓</span><div><b>Restrições</b><p>Inclui o que você ama de forma estratégica. Sem passar fome, sem culpa.</p></div></li>
+            <li><span class="cmpx__ic">✓</span><div><b>Sintomas</b><p>Tratados primeiro, porque são eles que travam o emagrecimento.</p></div></li>
+            <li><span class="cmpx__ic">✓</span><div><b>Suporte</b><p>Acompanhamento próximo para tirar dúvidas e ajustar a rota até a sua meta.</p></div></li>
+            <li><span class="cmpx__ic">✓</span><div><b>Resultado</b><p>Peso definitivo. O resultado se mantém porque a causa foi tratada.</p></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="compare__cta" data-reveal="up"><a href="#agendar" class="btn btn--lg"><span class="shine"></span>Quero Tratar a Causa</a></div>
+  </div>
+</section>
+
+<!-- ===================== S3 SOBRE ===================== -->
+<section class="about" id="sobre">
+  <svg class="curve" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0C360 90 1080 90 1440 0Z" fill="#f7f5f4"/></svg>
+  <svg class="leaf leaf--desk" width="88" height="88" style="top:16%;left:2%;opacity:.3;filter:blur(1.5px);animation-duration:13s;animation-delay:-4s" aria-hidden="true"><use href="#leaf"/></svg>
+  <svg class="leaf leaf--gold" width="48" height="48" style="bottom:16%;right:6%;opacity:.35;filter:blur(1.5px);animation-duration:11s;animation-delay:-8s" aria-hidden="true"><use href="#leaf"/></svg>
+  <div class="container about__in">
+    <div class="about__grid">
+      <div class="about__media" data-reveal="left">
+        <div class="about__img ph">Kamilla em atendimento, conversando com paciente ou no notebook<br><small>sobre-kamilla.jpg · 550 x 650px</small></div>
+        <div class="about__badge"><b>+1.000</b><span>pacientes transformadas</span></div>
+      </div>
+      <div data-reveal="right" style="--rd:.1s">
+        <p class="eyebrow" style="margin-bottom:18px">Quem vai te acompanhar</p>
+        <h2 class="h2">Prazer, Kamilla Fertonani. Nutricionista de mais de 1.000 mulheres que pararam de brigar com a balança.</h2>
+        <p class="lead">Sou nutricionista especialista em emagrecimento definitivo e saúde intestinal. Depois de mais de 1.000 pacientes, aprendi uma coisa: quase toda mulher que "não consegue emagrecer" tem, na verdade, um intestino que ainda não foi tratado. Meu trabalho é regular esse intestino e montar um plano que cabe na sua vida real: no seu bolso, no seu gosto e no seu tempo.</p>
+        <ul class="checks">
+          <li><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></i><span>Plano 100% individualizado, com comida de verdade e que cabe no seu bolso.</span></li>
+          <li><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></i><span>Modulação intestinal para destravar o metabolismo e acabar com o estufamento.</span></li>
+          <li><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></i><span>Acompanhamento próximo: você nunca fica sozinha com uma folha de papel.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== S4 MÉTODO ===================== -->
+<section class="method" id="metodo">
+  <svg class="curve" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0C360 90 1080 90 1440 0Z" fill="#ffffff"/></svg>
+  <svg class="leaf leaf--desk" width="76" height="76" style="top:30%;right:4%;opacity:.32;filter:blur(1.5px);animation-duration:12s;animation-delay:-3s" aria-hidden="true"><use href="#leaf"/></svg>
+  <svg class="leaf" width="40" height="40" style="bottom:22%;left:6%;opacity:.28;filter:blur(2px);animation-duration:10s;animation-delay:-6s" aria-hidden="true"><use href="#leaf"/></svg>
+  <div class="container method__in">
+    <p class="eyebrow eyebrow--green" data-reveal="up">O método</p>
+    <h2 class="h2" data-reveal="up" style="--rd:.08s">Como funciona o seu acompanhamento, da primeira consulta ao resultado</h2>
+
+    <div class="timeline" id="timeline">
+      <div class="timeline__track" aria-hidden="true"><div class="timeline__fill" id="tlFill"></div></div>
+
+      <div class="tl tl--left">
+        <div class="tl__card" data-reveal="left">
+          <div class="tl__head">
+            <span class="tl__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4h6a1 1 0 0 1 1 1v1H8V5a1 1 0 0 1 1-1Z"/><path d="M16 5.5h2a1.5 1.5 0 0 1 1.5 1.5v12A1.5 1.5 0 0 1 18 20.5H6A1.5 1.5 0 0 1 4.5 19V7A1.5 1.5 0 0 1 6 5.5h2"/><circle cx="11" cy="12.5" r="2.5"/><path d="m13 14.5 3 3"/></svg></span>
+            <span class="tl__tag">Etapa 01</span>
+          </div>
+          <h3>Consulta detalhada</h3>
+          <p>Uma conversa a fundo sobre a sua rotina, exames, sintomas intestinais e histórico. É aqui que descobrimos o que está travando o seu emagrecimento.</p>
+        </div>
+        <div class="tl__spine"><span class="tl__dot" data-tl-dot><i></i></span></div>
+      </div>
+
+      <div class="tl tl--right">
+        <div class="tl__spine"><span class="tl__dot" data-tl-dot><i></i></span></div>
+        <div class="tl__card" data-reveal="right">
+          <div class="tl__head">
+            <span class="tl__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M11 5.5h2"/><path d="M9.5 10h5M9.5 13h5M9.5 16h3"/></svg></span>
+            <span class="tl__tag">Etapa 02</span>
+          </div>
+          <h3>Plano individualizado</h3>
+          <p>Você recebe pelo aplicativo um cardápio feito para você: no seu bolso, com os alimentos que você gosta e o tempo que você tem. Sem passar fome.</p>
+        </div>
+      </div>
+
+      <div class="tl tl--left">
+        <div class="tl__card" data-reveal="left">
+          <div class="tl__head">
+            <span class="tl__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h8A2.5 2.5 0 0 1 17 6.5v4a2.5 2.5 0 0 1-2.5 2.5H9l-3.5 3v-3H6.5A2.5 2.5 0 0 1 4 10.5v-4Z"/><path d="M17 9h.5A2.5 2.5 0 0 1 20 11.5v4a2.5 2.5 0 0 1-2.5 2.5H17v2.5L14 18h-3"/><path d="M8 8.5h6"/></svg></span>
+            <span class="tl__tag">Etapa 03</span>
+          </div>
+          <h3>Acompanhamento contínuo</h3>
+          <p>Ajustamos a rota conforme o seu corpo responde, tiramos as dúvidas do dia a dia e mantemos você firme até a meta. E depois dela.</p>
+        </div>
+        <div class="tl__spine"><span class="tl__dot tl__dot--end" data-tl-dot><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></i></span></div>
+      </div>
+    </div>
+
+    <div class="method__cta" data-reveal="up"><a href="#agendar" class="btn btn--lg"><span class="shine"></span>Quero Começar Meu Acompanhamento</a></div>
+  </div>
+</section>
+
+<!-- ===================== S4b PILARES ===================== -->
+<section class="pillars">
+  <svg class="curve" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0C360 90 1080 90 1440 0Z" fill="#e7ede8"/></svg>
+  <div class="container pillars__in">
+    <svg class="leaf" width="64" height="64" style="top:4%;right:6%;opacity:.4;filter:blur(1.5px);animation-duration:11s" aria-hidden="true"><use href="#leaf"/></svg>
+    <div class="pillars__grid">
+      <div class="orbit-wrap" data-reveal="scale">
+        <div class="orbit">
+          <div class="orbit__halo"></div>
+          <div class="orbit__ring orbit__ring--outer"></div>
+          <div class="orbit__ring">
+            <div class="orbit__pos"><div class="orbit__dot orbit__dot--green" title="Microbiota equilibrada"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7 2.5 13a3.5 3.5 0 0 0 7 0L7 7"/><path d="M19 7l-2.5 6a3.5 3.5 0 0 0 7 0L21 7"/><path d="M8 21h8"/></svg></div></div>
+            <div class="orbit__pos"><div class="orbit__dot orbit__dot--sage" title="Fim do estufamento"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 3.8C16 2.3 8.6 5.4 6.3 12.1c-.9 2.6-.6 5.4.5 7.6"/><path d="M20.2 3.8c1.1 4.3-1 12-8.4 13.6-1.4.3-2.9.2-4.3-.3"/><path d="M20.2 3.8 4 20"/></svg></div></div>
+            <div class="orbit__pos"><div class="orbit__dot orbit__dot--gold" title="Metabolismo destravado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4.4 0 7-2.9 7-6.6 0-3.1-1.8-5-3.2-6.6-.5 1.6-1.5 2.6-2.6 3.1.4-3.3-.9-7.2-4.2-9.4.2 2.6-1 4.3-2.4 6C5.2 10.1 5 12.1 5 15.4 5 19.1 7.6 22 12 22Z"/></svg></div></div>
+            <div class="orbit__pos"><div class="orbit__dot orbit__dot--terra" title="Energia constante"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></div></div>
+            <div class="orbit__pos"><div class="orbit__dot orbit__dot--green" title="Peso definitivo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 4.5 5.3v6c0 4.6 3.2 8.6 7.5 9.7 4.3-1.1 7.5-5.1 7.5-9.7v-6L12 2.5Z"/><path d="m8.8 12 2.2 2.2 4.4-4.6"/></svg></div></div>
+          </div>
+          <div class="orbit__disc"></div>
+          <div class="orbit__media ph">
+            <span class="orbit__phtext">Vídeo central<br>(15s, mulher com desconforto na barriga)<br>1:1</span>
+            <video class="orbit__video" autoplay muted loop playsinline preload="metadata">
+              <source src="assets/orbit.mp4" type="video/mp4">
+            </video>
+            <span class="orbit__gloss"></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow" data-reveal="up">Intestino regulado é corpo que emagrece</p>
+        <h2 class="h2" data-reveal="up" style="--rd:.08s">5 coisas que mudam quando o seu intestino é tratado</h2>
+        <ul class="pcards" id="pcards">
+          <li class="pcard pcard--green">
+            <span class="pcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7 2.5 13a3.5 3.5 0 0 0 7 0L7 7"/><path d="M19 7l-2.5 6a3.5 3.5 0 0 0 7 0L21 7"/><path d="M8 21h8"/></svg></span>
+            <div><span class="pcard__n">01</span><h3>Microbiota equilibrada</h3><p>O corpo passa a absorver o que precisa e a eliminar o que não serve.</p></div>
+          </li>
+          <li class="pcard pcard--sage">
+            <span class="pcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 3.8C16 2.3 8.6 5.4 6.3 12.1c-.9 2.6-.6 5.4.5 7.6"/><path d="M20.2 3.8c1.1 4.3-1 12-8.4 13.6-1.4.3-2.9.2-4.3-.3"/><path d="M20.2 3.8 4 20"/><path d="M11 8.5l.5 3.5"/><path d="M14.5 6.5l.5 3.5"/></svg></span>
+            <div><span class="pcard__n">02</span><h3>Fim do estufamento</h3><p>E do intestino preso. Barriga mais leve já nas primeiras semanas.</p></div>
+          </li>
+          <li class="pcard pcard--gold">
+            <span class="pcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4.4 0 7-2.9 7-6.6 0-3.1-1.8-5-3.2-6.6-.5 1.6-1.5 2.6-2.6 3.1.4-3.3-.9-7.2-4.2-9.4.2 2.6-1 4.3-2.4 6C5.2 10.1 5 12.1 5 15.4 5 19.1 7.6 22 12 22Z"/><path d="M12 22c-1.9 0-3-1.5-3-3.2 0-1.5 1-2.4 1.7-3.4.5 1 1.2 1.4 1.9 1.6.6-.8.8-1.8.7-2.7 1 1 1.7 2.4 1.7 4.5 0 1.7-1.1 3.2-3 3.2Z"/></svg></span>
+            <div><span class="pcard__n">03</span><h3>Metabolismo destravado</h3><p>O peso que estava parado volta a descer, sem cortes radicais.</p></div>
+          </li>
+          <li class="pcard pcard--terra">
+            <span class="pcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></span>
+            <div><span class="pcard__n">04</span><h3>Energia constante</h3><p>Ao longo do dia, sem o cansaço e o sono depois das refeições.</p></div>
+          </li>
+          <li class="pcard pcard--green">
+            <span class="pcard__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 4.5 5.3v6c0 4.6 3.2 8.6 7.5 9.7 4.3-1.1 7.5-5.1 7.5-9.7v-6L12 2.5Z"/><path d="m8.8 12 2.2 2.2 4.4-4.6"/></svg></span>
+            <div><span class="pcard__n">05</span><h3>Peso definitivo</h3><p>O resultado se mantém porque a causa foi tratada, não só o sintoma.</p></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== S5 PROVA SOCIAL ===================== -->
+<section class="social" id="depoimentos">
+  <svg class="curve" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0C360 90 1080 90 1440 0Z" fill="#f7f5f4"/></svg>
+  <svg class="leaf leaf--terra leaf--desk" width="84" height="84" style="top:18%;right:5%;opacity:.3;filter:blur(1.5px);animation-duration:13s;animation-delay:-5s" aria-hidden="true"><use href="#leaf"/></svg>
+  <svg class="leaf" width="46" height="46" style="bottom:10%;left:3%;opacity:.3;filter:blur(2px);animation-duration:11s;animation-delay:-2s" aria-hidden="true"><use href="#leaf"/></svg>
+  <div class="container social__in">
+    <div class="social__head">
+      <div data-reveal="up">
+        <p class="eyebrow">Resultados reais</p>
+        <h2 class="h2">Quem passa pelo processo, aprova</h2>
+        <p class="social__desc">Mulheres que pararam de fazer dieta, trataram a causa e recuperaram a saúde, a energia e o peso que queriam.</p>
+      </div>
+      <div class="social__ctrl" data-reveal="up" style="--rd:.12s">
+        <button class="arrow arrow--prev" id="prevBtn" aria-label="Anterior">←</button>
+        <button class="arrow arrow--next" id="nextBtn" aria-label="Próximo">→</button>
+      </div>
+    </div>
+    <div class="slider" id="slider" data-reveal-children="right" data-reveal-step="0.12">
+      <div class="slide ph">Print de conversa no WhatsApp com depoimento de paciente<br><small>depoimento-0X.jpg · 350 x 450px</small></div>
+      <div class="slide ph">Print de conversa no WhatsApp com depoimento de paciente<br><small>depoimento-0X.jpg · 350 x 450px</small></div>
+      <div class="slide ph">Print de conversa no WhatsApp com depoimento de paciente<br><small>depoimento-0X.jpg · 350 x 450px</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== S5b QUIZ ===================== -->
+<section class="quiz" id="quiz">
+  <svg class="curve" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0C360 90 1080 90 1440 0Z" fill="#f4e6e1"/></svg>
+  <svg class="leaf leaf--desk" width="92" height="92" style="top:12%;left:2%;opacity:.3;filter:blur(1.5px);animation-duration:14s;animation-delay:-6s" aria-hidden="true"><use href="#leaf"/></svg>
+  <svg class="leaf leaf--gold" width="52" height="52" style="bottom:14%;right:4%;opacity:.35;filter:blur(1.5px);animation-duration:11s;animation-delay:-3s" aria-hidden="true"><use href="#leaf"/></svg>
+  <div class="container quiz__in">
+    <div class="quiz__grid">
+      <div data-reveal="left">
+        <p class="eyebrow">Teste rápido</p>
+        <h2 class="h2">Como está o seu intestino hoje?</h2>
+        <p class="quiz__desc">Responda 5 perguntas em menos de 1 minuto e descubra se o seu intestino pode estar travando o seu emagrecimento.</p>
+        <div class="quiz__meta"><span><i></i>5 perguntas</span><span><i></i>Resultado na hora</span><span><i></i>Sem cadastro</span></div>
+      </div>
+
+      <div class="qz" id="qz" data-reveal="scale" style="--rd:.12s">
+        <div class="qz__quiz">
+          <div class="qz__top"><span class="qz__step" id="qzStep">Pergunta 1 de 5</span><div class="qz__bar"><i id="qzBar"></i></div></div>
+          <h3 class="qz__q" id="qzQ"></h3>
+          <div class="qz__opts" id="qzOpts"></div>
+          <div class="qz__nav">
+            <button class="qz__back" id="qzBack" type="button" disabled>← Voltar</button>
+            <button class="btn btn--sm qz__next" id="qzNext" type="button" disabled>Próxima →</button>
+          </div>
+        </div>
+        <div class="qz__result">
+          <div class="qz__score" id="qzScore">
+            <svg class="qz__ring" viewBox="0 0 120 120" aria-hidden="true">
+              <defs>
+                <linearGradient id="qzGradOk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5fb98a"/><stop offset="1" stop-color="#2d5a37"/></linearGradient>
+                <linearGradient id="qzGradWarn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3dfa3"/><stop offset="1" stop-color="#c59b5f"/></linearGradient>
+                <linearGradient id="qzGradAlert" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e2a999"/><stop offset="1" stop-color="#b8654f"/></linearGradient>
+              </defs>
+              <circle class="qz__ring-bg" cx="60" cy="60" r="52"/>
+              <circle class="qz__ring-fg" id="qzRing" cx="60" cy="60" r="52"/>
+            </svg>
+            <div class="qz__score-in"><b id="qzScoreN">0</b><small>de 15</small></div>
+          </div>
+          <h3 class="qz__rtitle" id="qzRTitle"></h3>
+          <p class="qz__rtext" id="qzRText"></p>
+          <div class="qz__ractions">
+            <a href="#agendar" class="btn btn--lg"><span class="shine"></span>Quero Regular Meu Intestino</a>
+            <button class="qz__restart" id="qzRestart" type="button">Refazer o teste</button>
+          </div>
+          <p class="qz__note">Este teste é apenas um sinal de alerta e não substitui avaliação profissional.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== S6 FAQ ===================== -->
+<section class="faq" id="faq">
+  <svg class="curve" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0C360 90 1080 90 1440 0Z" fill="#e7ede8"/></svg>
+  <svg class="leaf" width="60" height="60" style="bottom:8%;left:4%;opacity:.28;filter:blur(2px);animation-duration:12s;animation-delay:-4s" aria-hidden="true"><use href="#leaf"/></svg>
+  <div class="container faq__in">
+    <div class="faq__grid">
+      <div class="faq__side" data-reveal="left">
+        <p class="eyebrow">Dúvidas frequentes</p>
+        <h2 class="h2">O que você precisa saber antes de agendar</h2>
+        <p class="faq__help">Não encontrou a sua dúvida? <a href="#agendar">Preencha o formulário</a> e eu respondo pessoalmente.</p>
+      </div>
+      <div class="faq__list" id="faqList" data-reveal-children="up" data-reveal-step="0.07">
+        <div class="acc is-open">
+          <button class="acc__btn" aria-expanded="true"><h3>Como funciona a consulta online?</h3><span class="acc__icon" aria-hidden="true">+</span></button>
+          <div class="acc__panel"><div><p>Com a mesma atenção do presencial, de onde você estiver. A consulta é por videochamada, avaliamos juntas o que está travando o seu resultado e você recebe o plano completo em um aplicativo exclusivo, com acompanhamento entre as consultas.</p></div></div>
+        </div>
+        <div class="acc">
+          <button class="acc__btn" aria-expanded="false"><h3>Vou precisar cortar tudo o que eu gosto de comer?</h3><span class="acc__icon" aria-hidden="true">+</span></button>
+          <div class="acc__panel"><div><p>Não. Dieta que corta tudo é a que você já tentou e não durou. O plano é montado para a sua vida real e inclui os alimentos que você ama de forma estratégica, para você conseguir manter o resultado sem sofrer.</p></div></div>
+        </div>
+        <div class="acc">
+          <button class="acc__btn" aria-expanded="false"><h3>Uso canetinha (Ozempic, Mounjaro) e meu intestino travou. Você atende esse caso?</h3><span class="acc__icon" aria-hidden="true">+</span></button>
+          <div class="acc__panel"><div><p>Sim, e é um dos casos mais comuns no consultório. A canetinha reduz o apetite, mas sem um plano alimentar adequado o intestino trava, o peso estaciona e você perde massa magra em vez de gordura. O acompanhamento nutricional ajusta fibras, hidratação e proteínas para o intestino voltar a funcionar e o resultado continuar.</p></div></div>
+        </div>
+        <div class="acc">
+          <button class="acc__btn" aria-expanded="false"><h3>Em quanto tempo vejo os primeiros resultados?</h3><span class="acc__icon" aria-hidden="true">+</span></button>
+          <div class="acc__panel"><div><p>Os primeiros sinais costumam aparecer nas primeiras duas semanas: menos estufamento, intestino mais regular e mais disposição ao longo do dia. A perda de peso e de medidas vem na sequência e varia de pessoa para pessoa, por isso o plano é ajustado ao longo do acompanhamento.</p></div></div>
+        </div>
+        <div class="acc">
+          <button class="acc__btn" aria-expanded="false"><h3>O que é modulação intestinal?</h3><span class="acc__icon" aria-hidden="true">+</span></button>
+          <div class="acc__panel"><div><p>É a estratégia que usamos para reequilibrar a sua microbiota, o conjunto de bactérias que vive no intestino. Combinamos alimentação direcionada e, quando necessário, suplementação específica para reduzir a inflamação, melhorar a absorção de nutrientes e destravar o metabolismo.</p></div></div>
+        </div>
+        <div class="acc">
+          <button class="acc__btn" aria-expanded="false"><h3>Estou na perimenopausa ou menopausa. O método funciona para mim?</h3><span class="acc__icon" aria-hidden="true">+</span></button>
+          <div class="acc__panel"><div><p>Sim. Grande parte das minhas pacientes tem mais de 40 anos e chega com a sensação de que "nada mais funciona". Nessa fase as mudanças hormonais afetam o intestino, o sono e a distribuição de gordura, e o plano é construído levando tudo isso em conta.</p></div></div>
+        </div>
+        <div class="acc">
+          <button class="acc__btn" aria-expanded="false"><h3>Preciso levar exames na primeira consulta?</h3><span class="acc__icon" aria-hidden="true">+</span></button>
+          <div class="acc__panel"><div><p>Se você tiver exames recentes, traga. Eles ajudam a entender o que está acontecendo por dentro. Se não tiver, não tem problema: na consulta eu avalio o que faz sentido solicitar e você começa o plano mesmo assim.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== S6b FORMULÁRIO ===================== -->
+<section class="book" id="agendar">
+  <svg class="curve" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0C360 90 1080 90 1440 0Z" fill="#ffffff"/></svg>
+  <svg class="leaf leaf--light leaf--desk" width="110" height="110" style="top:16%;right:-30px;opacity:.08;filter:blur(1px);animation-duration:14s;animation-delay:-3s" aria-hidden="true"><use href="#leaf"/></svg>
+  <svg class="leaf leaf--light" width="54" height="54" style="bottom:12%;left:4%;opacity:.1;filter:blur(1.5px);animation-duration:11s;animation-delay:-7s" aria-hidden="true"><use href="#leaf"/></svg>
+  <div class="container book__in">
+    <div class="book__head" data-reveal="up">
+      <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Solicitar agendamento</span>
+      <h2 class="h2 h2--light">Dê o primeiro passo hoje</h2>
+      <div class="book__rule"></div>
+      <p class="book__desc">Preencha os dados e eu entro em contato em até 24h para confirmar o seu horário. Atendimento online para todo o Brasil.</p>
+    </div>
+
+    <form class="form" id="bookForm" novalidate data-reveal="scale" style="--rd:.1s">
+      <div class="form__grid">
+        <label class="field"><span>Nome completo *</span><input required type="text" name="nome" autocomplete="name" placeholder="Seu nome"></label>
+        <label class="field"><span>E-mail *</span><input required type="email" name="email" autocomplete="email" placeholder="seu@email.com"></label>
+        <label class="field"><span>Telefone / WhatsApp *</span><input required type="tel" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(00) 9 0000-0000"></label>
+        <label class="field"><span>Objetivo principal *</span>
+          <select required name="objetivo">
+            <option value="" disabled selected>Selecione...</option>
+            <option>Emagrecer de vez (efeito sanfona)</option>
+            <option>Peso travado mesmo fazendo tudo certo</option>
+            <option>Intestino preso, estufamento, cansaço</option>
+            <option>Uso canetinha (Ozempic, Mounjaro) e quero acompanhamento</option>
+            <option>Perimenopausa / menopausa</option>
+            <option>Outro</option>
+          </select>
+        </label>
+      </div>
+      <label class="field field--full"><span>Conte um pouco sobre você</span><textarea rows="4" name="mensagem" placeholder="O que você já tentou e o que gostaria de mudar? Quanto mais detalhes, melhor eu me preparo para a sua consulta."></textarea></label>
+      <button type="submit" class="btn btn--lg btn--block"><span class="shine"></span>Quero Agendar Minha Consulta →</button>
+      <p class="form__safe"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Suas informações são confidenciais. Sem spam, sem compromisso.</p>
+    </form>
+
+    <div class="success" id="bookSuccess" hidden>
+      <div class="success__ic">✓</div>
+      <h3>Recebi o seu pedido!</h3>
+      <p>Em até 24h eu entro em contato pelo WhatsApp para confirmar o seu horário. Enquanto isso, me acompanhe no Instagram: <a href="https://www.instagram.com/kamillafertonani/" target="_blank" rel="noopener">@kamillafertonani</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== S7 FOOTER CTA ===================== -->
+<footer class="footer">
+  <svg class="curve" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0C360 90 1080 90 1440 0Z" fill="#234a2c"/></svg>
+  <svg class="leaf leaf--desk" width="96" height="96" style="top:18%;left:3%;opacity:.28;filter:blur(1.5px);animation-duration:14s;animation-delay:-5s" aria-hidden="true"><use href="#leaf"/></svg>
+  <svg class="leaf leaf--gold" width="54" height="54" style="top:34%;right:5%;opacity:.35;filter:blur(2px);animation-duration:12s;animation-delay:-9s" aria-hidden="true"><use href="#leaf"/></svg>
+  <div class="container footer__in">
+    <div class="footer__cta">
+      <h2 class="h2" data-reveal="up">Você já tentou de tudo. Agora, emagreça <em>pela última vez</em>.</h2>
+      <p class="footer__sub" data-reveal="up" style="--rd:.08s">Trate a causa, regule o intestino e pare de recomeçar toda segunda-feira.</p>
+      <a href="#agendar" class="btn btn--xl" data-reveal="up" style="--rd:.16s"><span class="shine"></span>Agendar Minha Consulta Agora</a>
+    </div>
+
+    <div class="footer__grid">
+      <div class="footer__col footer__brand">
+        <span class="brand__name">Kamilla Fertonani</span>
+        <span class="brand__role">Nutricionista</span>
+        <p>Emagrecimento definitivo pela saúde intestinal. Atendimento online para todo o Brasil.</p>
+      </div>
+      <div class="footer__col">
+        <span class="footer__title">Contato</span>
+        <a href="mailto:kamillafertonani@gmail.com">kamillafertonani@gmail.com</a>
+        <span>CRN-XX</span>
+        <span>CNPJ 43.480.002/0001-38</span>
+      </div>
+      <div class="footer__col">
+        <span class="footer__title">Redes sociais</span>
+        <div class="social-links">
+          <a href="https://www.instagram.com/kamillafertonani/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#agendar" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2a9.8 9.8 0 0 0-8.4 14.8L2.2 21.8l4.9-1.3A9.8 9.8 0 1 0 12 2.2Zm0 17.9a8.1 8.1 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.1 8.1 0 1 1 12 20.1Zm4.5-6c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2Z"/></svg></a>
+          <a href="#" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.2h2.4l.4-2.9h-2.8V9.1c0-.8.2-1.4 1.4-1.4h1.5V5.1c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.1H8v2.9h2.5V21h3Z"/></svg></a>
+          <a href="#" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.4 8.6H3.6V20h2.8V8.6ZM5 4a1.7 1.7 0 1 0 0 3.4A1.7 1.7 0 0 0 5 4Zm15 9.1c0-3.1-1.7-4.7-4-4.7-1.8 0-2.7 1-3.1 1.7V8.6H10V20h2.8v-5.7c0-1.5.3-3 2.1-3s1.9 1.7 1.9 3.1V20H20v-6.9Z"/></svg></a>
+          <a href="#" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 3c.3 2.4 1.7 3.9 4 4v3a7.4 7.4 0 0 1-4-1.3v6.1a5.7 5.7 0 1 1-5.7-5.7c.3 0 .6 0 .9.1v3.1a2.7 2.7 0 1 0 1.8 2.5V3h3Z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <span>© <span id="year">2026</span> Kamilla Fertonani · Nutricionista · Todos os direitos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<!-- ===================== POPUP FLUTUANTE (direita) ===================== -->
+<div class="chat-pop" id="chatPop" role="complementary" aria-label="Fale com a Kamilla">
+  <a class="chat-pop__avatar" href="#agendar" aria-label="Agendar consulta">
+    <span class="chat-pop__initials">KF</span>
+    <img src="assets/kamilla-avatar.jpg" alt="" onerror="this.remove()">
+    <span class="chat-pop__dot" aria-hidden="true"></span>
+  </a>
+  <a class="chat-pop__bubble" href="#agendar">
+    <span class="chat-pop__label">Kamilla · Nutricionista</span>
+    <span class="chat-pop__text">Olá, como posso te ajudar hoje?</span>
+  </a>
+  <button class="chat-pop__close" id="chatPopClose" type="button" aria-label="Fechar">×</button>
+</div>
+
+<!-- ===================== COOKIES (esquerda) ===================== -->
+<div class="cookie" id="cookie" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <div class="cookie__ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5a9.5 9.5 0 1 0 9.4 11c-1.6.4-3.2-.4-3.8-1.9-1.5.2-2.9-.8-3.2-2.3-1.5-.3-2.4-1.8-2-3.3C11 5.6 10.8 4 12 2.5Z"/><circle cx="8.5" cy="10.5" r="1"/><circle cx="9.5" cy="16" r="1"/><circle cx="14.5" cy="15.5" r="1"/></svg></div>
+  <div class="cookie__body">
+    <strong class="cookie__title">Cookies e privacidade</strong>
+    <p class="cookie__text">Usamos cookies para melhorar a sua experiência e entender o que funciona na página. Você pode aceitar todos ou manter só os essenciais.</p>
+    <div class="cookie__actions">
+      <button class="btn btn--sm" id="cookieAll" type="button">Aceitar todos</button>
+      <button class="cookie__essential" id="cookieEssential" type="button">Só essenciais</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  // ---------- Popup flutuante + cookies ----------
+  (function(){
+    var pop = document.getElementById('chatPop'), popClose = document.getElementById('chatPopClose');
+    var ck = document.getElementById('cookie'), ckAll = document.getElementById('cookieAll'), ckEss = document.getElementById('cookieEssential');
+    var store = { get: function(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }, set: function(k,v){ try { localStorage.setItem(k,v); } catch(e){} } };
+    var cookieDone = !!store.get('kf_cookie');
+    var chatClosed = (function(){ try { return sessionStorage.getItem('kf_chat_closed') === '1'; } catch(e){ return false; } })();
+    var small = window.matchMedia && window.matchMedia('(max-width:600px)').matches;
+
+    function showChat(){ if (!chatClosed) pop.classList.add('is-on'); }
+    function hideChat(){ pop.classList.remove('is-on'); try { sessionStorage.setItem('kf_chat_closed','1'); } catch(e){} }
+    function decideCookie(v){ store.set('kf_cookie', v); ck.classList.remove('is-on'); ck.classList.add('is-off'); if (small) setTimeout(showChat, 600); }
+
+    if (!cookieDone) setTimeout(function(){ ck.classList.add('is-on'); }, 1200);
+    // No celular o popup espera a decisão de cookies para não sobrepor; no desktop aparece após 4s
+    if (cookieDone || !small) setTimeout(showChat, 4000);
+
+    popClose.addEventListener('click', hideChat);
+    ckAll.addEventListener('click', function(){ decideCookie('all'); });
+    ckEss.addEventListener('click', function(){ decideCookie('essential'); });
+  })();
+
+  // ---------- Ano do rodapé ----------
+  var yr = document.getElementById('year'); if (yr) yr.textContent = new Date().getFullYear();
+
+  // ---------- Menu mobile ----------
+  var header = document.getElementById('header');
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('nav');
+  menuBtn.addEventListener('click', function(){
+    var open = header.classList.toggle('is-open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+  });
+  nav.addEventListener('click', function(e){
+    if (e.target.tagName === 'A') { header.classList.remove('is-open'); menuBtn.setAttribute('aria-expanded','false'); }
+  });
+
+  // ---------- Carrossel de depoimentos ----------
+  var slider = document.getElementById('slider');
+  function step(){ var s = slider.querySelector('.slide'); return s ? s.getBoundingClientRect().width + 24 : 374; }
+  document.getElementById('prevBtn').addEventListener('click', function(){ slider.scrollBy({left:-step(), behavior:'smooth'}); });
+  document.getElementById('nextBtn').addEventListener('click', function(){ slider.scrollBy({left: step(), behavior:'smooth'}); });
+
+  // ---------- FAQ (acordeão: abre um por vez) ----------
+  var accs = document.querySelectorAll('#faqList .acc');
+  accs.forEach(function(acc){
+    acc.querySelector('.acc__btn').addEventListener('click', function(){
+      var isOpen = acc.classList.contains('is-open');
+      accs.forEach(function(a){ a.classList.remove('is-open'); a.querySelector('.acc__btn').setAttribute('aria-expanded','false'); });
+      if (!isOpen) { acc.classList.add('is-open'); acc.querySelector('.acc__btn').setAttribute('aria-expanded','true'); }
+    });
+  });
+
+  // ---------- Formulário (estado de sucesso; integrar envio depois) ----------
+  var form = document.getElementById('bookForm');
+  var success = document.getElementById('bookSuccess');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    form.hidden = true;
+    success.hidden = false;
+    success.scrollIntoView({behavior:'smooth', block:'center'});
+  });
+
+  // ---------- Reveal no scroll ----------
+  (function(){
+    // data-reveal-children="up|left|right|scale": aplica reveal a cada filho com atraso escalonado
+    document.querySelectorAll('[data-reveal-children]').forEach(function(p){
+      var type = p.getAttribute('data-reveal-children') || 'up';
+      var step = parseFloat(p.getAttribute('data-reveal-step') || '0.09');
+      Array.prototype.forEach.call(p.children, function(c, i){
+        if (!c.hasAttribute('data-reveal')) c.setAttribute('data-reveal', type);
+        if (!c.style.getPropertyValue('--rd')) c.style.setProperty('--rd', (i * step).toFixed(2) + 's');
+      });
+    });
+    var els = document.querySelectorAll('[data-reveal]');
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || !('IntersectionObserver' in window)) { els.forEach(function(e){ e.classList.add('is-in'); }); return; }
+    // Mesma linha de ativação da Oncreate: topo do elemento acima de ~80% da altura da tela
+    var LINE = 0.82;
+    function syncNow(){
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      els.forEach(function(e){
+        var r = e.getBoundingClientRect();
+        var visible = r.top < vh * LINE && r.bottom > 0;
+        e.classList.toggle('is-in', visible);
+      });
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) en.target.classList.add('is-in');
+        else en.target.classList.remove('is-in');
+      });
+    }, { root: null, rootMargin: '0px 0px -18% 0px', threshold: 0 });
+    els.forEach(function(e){ io.observe(e); });
+    // Passagem inicial por posição (garante a primeira dobra visível mesmo se o observer atrasar)
+    syncNow();
+    window.addEventListener('load', syncNow);
+    window.addEventListener('pageshow', syncNow);
+  })();
+
+  // ---------- Comparativo: toggle Antes / Agora ----------
+  (function(){
+    var box = document.getElementById('cmpx');
+    if (!box) return;
+    var tabs = box.querySelectorAll('.cmpx__tab');
+    var interacted = false;
+    function setState(state){
+      box.classList.toggle('is-new', state === 'new');
+      tabs.forEach(function(t){
+        var on = t.getAttribute('data-state') === state;
+        t.classList.toggle('is-active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+    }
+    tabs.forEach(function(t){
+      t.addEventListener('click', function(){ interacted = true; box.classList.add('has-clicked'); setState(t.getAttribute('data-state')); });
+    });
+    // Vira sozinho para "Agora" uma vez, ao entrar na tela, para mostrar a diferença
+    if ('IntersectionObserver' in window && !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      var done = false;
+      var io = new IntersectionObserver(function(en){
+        if (done || !en[0].isIntersecting) return;
+        done = true; io.disconnect();
+        setTimeout(function(){ if (!interacted) setState('new'); }, 1800);
+      }, { threshold: 0.5 });
+      io.observe(box);
+    }
+  })();
+
+  // ---------- Scroll stacking: escala e escurece o card que está sendo coberto ----------
+  // initStack(lista, { gap, only }) — `only` é uma media query; fora dela o efeito é desligado
+  function initStack(list, opts){
+    if (!list) return;
+    var cards = Array.prototype.slice.call(list.children);
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce || cards.length < 2) return;
+    var gap = (opts && opts.gap) || 16;
+    var mq = opts && opts.only && window.matchMedia ? window.matchMedia(opts.only) : null;
+    var ticking = false;
+    function reset(c){ c.style.transform = ''; c.style.setProperty('--dim', 0); c.classList.remove('is-covered'); }
+    function update(){
+      ticking = false;
+      var active = !mq || mq.matches;
+      for (var i = 0; i < cards.length; i++) {
+        var c = cards[i], next = cards[i + 1];
+        if (!active || !next) { reset(c); continue; }
+        var r = c.getBoundingClientRect(), n = next.getBoundingClientRect();
+        // 0 = próximo card ainda longe; 1 = próximo card totalmente em cima deste
+        var dist = n.top - r.top;
+        var full = r.height + gap;
+        var covered = Math.max(0, Math.min(1, 1 - (dist - 12) / (full - 12)));
+        var scale = 1 - covered * 0.06;
+        var y = -covered * 6;
+        c.style.transform = covered > 0.001 ? 'translateY(' + y.toFixed(2) + 'px) scale(' + scale.toFixed(4) + ')' : '';
+        c.style.setProperty('--dim', (covered * 0.10).toFixed(3));
+        c.classList.toggle('is-covered', covered > 0.5);
+      }
+    }
+    function onScroll(){ if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    window.addEventListener('load', update);
+    if (mq && mq.addEventListener) mq.addEventListener('change', update);
+    update();
+  }
+  initStack(document.getElementById('pcards'), { gap: 16 });
+  initStack(document.getElementById('cards3'), { gap: 16, only: '(max-width: 860px)' });
+
+  // ---------- Timeline: linha que se preenche com o scroll e acende os pontos ----------
+  (function(){
+    var tl = document.getElementById('timeline'), fill = document.getElementById('tlFill');
+    if (!tl || !fill) return;
+    var track = tl.querySelector('.timeline__track');
+    var dots = tl.querySelectorAll('[data-tl-dot]');
+    var ticking = false;
+    function update(){
+      ticking = false;
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      var tr = track.getBoundingClientRect();
+      // O preenchimento alcança o ponto do trilho que está a ~70% da altura da tela
+      var line = vh * 0.7;
+      var h = Math.max(0, Math.min(tr.height, line - tr.top));
+      fill.style.height = h + 'px';
+      dots.forEach(function(d){
+        var dr = d.getBoundingClientRect();
+        var center = dr.top + dr.height / 2;
+        d.classList.toggle('is-lit', center <= tr.top + h + 1);
+      });
+    }
+    function onScroll(){ if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    window.addEventListener('load', update);
+    update();
+  })();
+
+  // ---------- Vídeo da órbita: se o arquivo não existir, mantém o placeholder ----------
+  var ov = document.querySelector('.orbit__video');
+  if (ov) {
+    var src = ov.querySelector('source');
+    var hideVideo = function(){ ov.style.display = 'none'; };
+    if (src) src.addEventListener('error', hideVideo);
+    ov.addEventListener('error', hideVideo);
+    ov.addEventListener('loadeddata', function(){ var t = ov.parentNode.querySelector('.orbit__phtext'); if (t) t.style.display = 'none'; });
+  }
+
+  // ---------- Quiz intestinal ----------
+  var QUESTIONS = [
+    { q: 'Com que frequência você sente a barriga estufada ou inchada depois de comer?', opts: ['Quase nunca','Algumas vezes por semana','Quase todos os dias','Todos os dias'] },
+    { q: 'Como está o seu intestino?', opts: ['Funciona todo dia, sem esforço','Funciona quase todo dia','Fica 2 ou 3 dias sem funcionar','Só funciona com remédio ou muito esforço'] },
+    { q: 'Você sente cansaço ou sono logo depois das refeições, mesmo dormindo bem?', opts: ['Raramente','Às vezes','Frequentemente','Sempre'] },
+    { q: 'Como tem sido a sua relação com a balança?', opts: ['Peso estável, sem sofrimento','Já fiz dieta e mantive o resultado','Emagreço e volto a ganhar (efeito sanfona)','Faço tudo certo e o peso não desce'] },
+    { q: 'Com que frequência bate aquela vontade forte de doce ou massa, principalmente à tarde e à noite?', opts: ['Quase nunca','Algumas vezes por semana','Quase todos os dias','Todos os dias, é difícil controlar'] }
+  ];
+  var RESULTS = [
+    { max: 4,  cls: 'qz__score--ok',    title: 'Seu intestino está em dia',
+      text: 'Ótimo sinal. Você tem uma base boa para emagrecer com saúde. Se quiser acelerar o resultado ou manter o que já conquistou com um plano feito para a sua rotina, a consulta é o próximo passo.' },
+    { max: 9,  cls: 'qz__score--warn',  title: 'Seu intestino está dando sinais de alerta',
+      text: 'Estufamento, cansaço e oscilação de peso costumam andar juntos. Esses sinais indicam que o seu intestino pode estar segurando o seu emagrecimento. Quanto antes ajustar, mais rápido o corpo responde.' },
+    { max: 15, cls: 'qz__score--alert', title: 'Seu intestino está pedindo socorro',
+      text: 'Com esse resultado, é muito provável que nenhuma dieta funcione de verdade enquanto a causa não for tratada. A boa notícia: intestino regulado é corpo que emagrece, e é exatamente isso que trabalhamos no acompanhamento.' }
+  ];
+  var qz = document.getElementById('qz');
+  var elQ = document.getElementById('qzQ'), elOpts = document.getElementById('qzOpts'), elStep = document.getElementById('qzStep'), elBar = document.getElementById('qzBar');
+  var btnBack = document.getElementById('qzBack'), btnNext = document.getElementById('qzNext');
+  var answers = [], idx = 0;
+
+  function render(){
+    var item = QUESTIONS[idx];
+    elStep.textContent = 'Pergunta ' + (idx+1) + ' de ' + QUESTIONS.length;
+    elBar.style.width = ((idx) / QUESTIONS.length * 100) + '%';
+    elQ.textContent = item.q;
+    elOpts.innerHTML = '';
+    item.opts.forEach(function(label, i){
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'qz__opt' + (answers[idx] === i ? ' is-sel' : '');
+      b.innerHTML = '<i></i><span>' + label + '</span>';
+      b.addEventListener('click', function(){
+        answers[idx] = i;
+        elOpts.querySelectorAll('.qz__opt').forEach(function(o){ o.classList.remove('is-sel'); });
+        b.classList.add('is-sel');
+        btnNext.disabled = false;
+      });
+      elOpts.appendChild(b);
+    });
+    btnBack.disabled = idx === 0;
+    btnNext.disabled = typeof answers[idx] !== 'number';
+    btnNext.textContent = idx === QUESTIONS.length - 1 ? 'Ver resultado →' : 'Próxima →';
+  }
+  function finish(){
+    var score = answers.reduce(function(a,b){ return a + b; }, 0);
+    var r = RESULTS.filter(function(x){ return score <= x.max; })[0];
+    var sc = document.getElementById('qzScore');
+    sc.className = 'qz__score ' + r.cls;
+    // Anel: preenche até a pontuação; número sobe contando
+    var ring = document.getElementById('qzRing'), num = document.getElementById('qzScoreN');
+    var C = 326.7, target = C * (1 - score / 15);
+    ring.style.transition = 'none'; ring.style.strokeDashoffset = C; num.textContent = '0';
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){
+      ring.style.transition = ''; ring.style.strokeDashoffset = target;
+      var t0 = null; (function tick(ts){ if (!t0) t0 = ts; var p = Math.min(1, (ts - t0) / 1100); var e = 1 - Math.pow(1 - p, 3); num.textContent = Math.round(score * e); if (p < 1) requestAnimationFrame(tick); else num.textContent = score; })(performance.now());
+    }); });
+    document.getElementById('qzRTitle').textContent = r.title;
+    document.getElementById('qzRText').textContent = r.text;
+    elBar.style.width = '100%';
+    qz.classList.add('is-done');
+  }
+  btnNext.addEventListener('click', function(){
+    if (typeof answers[idx] !== 'number') return;
+    if (idx < QUESTIONS.length - 1) { idx++; render(); } else { finish(); }
+  });
+  btnBack.addEventListener('click', function(){ if (idx > 0) { idx--; render(); } });
+  document.getElementById('qzRestart').addEventListener('click', function(){
+    answers = []; idx = 0; qz.classList.remove('is-done'); render();
+  });
+  render();
+})();
+</script>
+</body>
+</html>
