@@ -34,22 +34,24 @@ O GitHub Pages republica sozinho em 1 a 2 minutos. Como o `cname` já foi mexido
 index.html        página inteira: CSS no <style>, JS no <script> final
 CNAME             subdomínio do GitHub Pages (não apagar)
 assets/
-  hero-kamilla.jpg    foto do hero (também usada provisoriamente na seção Sobre)
+  hero-kamilla.jpg    foto do hero (1200x1600, convertida de HEIC)
+  sobre-kamilla.jpg   foto da seção Sobre (1200x1600, convertida de HEIC)
   dor-01.jpg          card 01 de dores: mulher no sofá com dor na barriga (800x500)
   dor-02.jpg          card 02: mulher frustrada com balança (800x500)
   dor-03.jpg          card 03: mulher desanimada com prato de dieta (800x500)
   orbit.mp4           vídeo da órbita dos 5 pilares (10 MB, 1080x1350, 12,6 s)
+  paciente-5kg.mp4    vídeo da paciente -5,100kg em 7 dias (11 MB, 720x1280, 48 s, com áudio; original .mov de 200 MB comprimido com ffmpeg)
+  paciente-5kg-poster.jpg  capa do vídeo (frame de 4 s, com a plaquinha)
 ```
 
 Imagens que **ainda não existem** e caem em placeholder amarelo ou fallback automaticamente:
 
 | Arquivo | Onde aparece | Tamanho |
 |---|---|---|
-| `assets/sobre-kamilla.jpg` | seção Sobre (hoje usa a foto do hero) | 550 x 650 |
 | `assets/depoimento-01.jpg`, `-02`, `-03` | carrossel de depoimentos (prints de WhatsApp) | 350 x 450 |
 | `assets/kamilla-avatar.jpg` | popup flutuante (hoje mostra as iniciais KF) | 200 x 200 |
 
-Basta salvar o arquivo com esse nome na pasta `assets` e fazer o push: as tags `<img>` já existem com `onerror` para esconder quando o arquivo falta. Para a seção Sobre, trocar o `src` de `hero-kamilla.jpg` para `sobre-kamilla.jpg`.
+Basta salvar o arquivo com esse nome na pasta `assets` e fazer o push: as tags `<img>` já existem com `onerror` para esconder quando o arquivo falta.
 
 ## Ordem das seções
 
@@ -61,12 +63,13 @@ Basta salvar o arquivo com esse nome na pasta `assets` e fazer o push: as tags `
 6. **Sobre** — foto com selo "+1.000" (contador em câmera lenta + flutuação no scroll), título em duas linhas, lista de 3 cards com check.
 7. **Método** — timeline com trilho em tubo de vidro que se preenche com o scroll (`#tlFill`) e medalhões 1, 2, ✓ que acendem.
 8. **5 pilares** — órbita com vídeo central e 5 ícones girando; à direita 5 cards que fazem scroll stacking (a órbita fica sticky no desktop).
-9. **Depoimentos** — carrossel horizontal com setas.
-10. **Quiz** "Como está o seu intestino hoje?" — 5 perguntas, pontuação 0–15, resultado em anel SVG com 3 faixas (verde / dourado / terracota), CTA para o formulário.
-11. **FAQ** — 7 perguntas em acordeão (uma aberta por vez).
-12. **Formulário** — nome, e-mail, WhatsApp, objetivo (select), mensagem. **Só simula o envio** (mostra a tela de sucesso); não há backend.
-13. **Rodapé** — CTA final, colunas Marca / Contato / Redes (5 ícones), linha de direitos com ano automático.
-14. **Flutuantes** — popup de chat à direita (aparece após 4 s, fecha por sessão) e aviso de cookies à esquerda (decisão salva em `localStorage` na chave `kf_cookie`).
+9. **Caso real** (`#resultado`) — vídeo vertical da paciente (-5,100kg em 7 dias) com capa e botão "Assista com som" (toca com áudio e libera os controles ao clicar; `preload="none"`), selo flutuante, copy, 3 números, bloco "Por que tão rápido?", CTA e aviso "Resultados variam".
+10. **Depoimentos** — carrossel horizontal com setas.
+11. **Quiz** "Como está o seu intestino hoje?" — 5 perguntas, pontuação 0–15, resultado em anel SVG com 3 faixas (verde / dourado / terracota), CTA para o formulário.
+12. **FAQ** — 7 perguntas em acordeão (uma aberta por vez).
+13. **Formulário** — nome, e-mail, WhatsApp, objetivo (select), mensagem. **Só simula o envio** (mostra a tela de sucesso); não há backend.
+14. **Rodapé** — CTA final, colunas Marca / Contato / Redes (5 ícones), linha de direitos com ano automático.
+15. **Flutuantes** — popup de chat à direita (aparece após 4 s, fecha por sessão) e aviso de cookies à esquerda (decisão salva em `localStorage` na chave `kf_cookie`).
 
 ## Padrões usados no código (para não quebrar ao editar)
 
