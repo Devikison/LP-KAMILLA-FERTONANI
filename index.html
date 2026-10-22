@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kamilla Fertonani | Nutricionista — Emagrecimento Definitivo pela Saúde Intestinal</title>
+<title>Kamilla Fertonani | Nutricionista em Emagrecimento e Saúde Intestinal</title>
 <meta name="description" content="Intestino regulado é corpo que emagrece. Consulta online com a nutricionista Kamilla Fertonani: plano 100% personalizado, sem passar fome, com mais de 1.000 pacientes transformadas. Agende sua consulta.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%232d5a37'/%3E%3Cpath d='M16 48C16 30 30 16 48 16 48 34 34 48 16 48Z' fill='%23dfba81'/%3E%3Cpath d='M16 48 48 16' stroke='%232d5a37' stroke-width='2.5'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1499,7 +1499,11 @@ section[id],footer[id]{scroll-margin-top:84px}
       var target = id ? document.getElementById(id) : null;
       if (!target && id !== 'top') return;
       e.preventDefault();
-      if (id === 'top' || !target) window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (window.__lenis) {
+        var off = target ? -(parseFloat(getComputedStyle(target).scrollMarginTop) || 0) : 0;
+        window.__lenis.scrollTo(id === 'top' || !target ? 0 : target, { offset: off, duration: 1.4 });
+      }
+      else if (id === 'top' || !target) window.scrollTo({ top: 0, behavior: 'smooth' });
       else target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       history.replaceState(null, '', location.pathname + location.search);
     });
@@ -1845,6 +1849,20 @@ section[id],footer[id]{scroll-margin-top:84px}
   v.addEventListener('play', function(){ f.classList.add('is-playing'); });
   v.addEventListener('ended', function(){ f.classList.remove('is-playing'); v.controls = false; v.load(); });
 })();
+</script>
+<!-- Smooth scroll no desktop (Lenis): só com mouse e sem "reduzir movimento"; no touch o scroll segue nativo -->
+<style>html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}.lenis.lenis-stopped{overflow:clip}</style>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+  (function(){
+    if (typeof Lenis === 'undefined') return;
+    if (!matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var lenis = new Lenis({ duration: 1.25, easing: function(t){ return Math.min(1, 1.001 - Math.pow(2, -10 * t)); }, wheelMultiplier: 0.95 });
+    window.__lenis = lenis;
+    function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+  })();
 </script>
 </body>
 </html>
